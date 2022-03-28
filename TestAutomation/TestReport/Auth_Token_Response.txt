@@ -1,0 +1,6 @@
+Response value {
+    access_token: 62092e7c-7663-47b1-888d-bb421f2a37b4,
+    token_type: bearer,
+    refresh_token: e01d2a7d-5de1-44fd-b614-80ece232289f,
+    expires_in: 3600
+}.

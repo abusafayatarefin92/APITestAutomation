@@ -1,0 +1,24 @@
+All json body [
+    {
+        "id": 29216,
+        "tracerNumber": "29216",
+        "transactionDate": "2018-02-07",
+        "valueDate": null,
+        "amount": 100000,
+        "instrumentNumber": "V-",
+        "amountLcy": 100000,
+        "currency": "BDT",
+        "accountId": 1953,
+        "accountNumber": "0606211002303",
+        "narration": "CS DEPOSITS",
+        "globalTransactionNumber": 0,
+        "ownBranchId": 606,
+        "initiatorBranchId": 606,
+        "batchNumber": null,
+        "entryUser": "BACKLOG",
+        "verifyUser": "005002",
+        "transactionCode": "101",
+        "transactionType": "CREDIT",
+        "transactionDefinitionId": 11050010
+    }
+].

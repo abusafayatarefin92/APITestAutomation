@@ -1,0 +1,62 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, October 26, 2021                              |
+|			Test Run Start Time        :	11:40:40 AM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+11:40:40:170 Test Step: Test Step 1
+11:40:40:170 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+11:40:40:170 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+11:40:40:171 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+11:40:40:173 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+11:40:40:173 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+11:40:40:233 Test Step: REST API Requests For Cheque Requisition Create, Cancel
+11:40:40:235 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+11:40:40:235 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+11:40:40:235 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions, 3030, NULL] PASS
+11:40:40:239 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62964d6f-b1d4-40a2-83eb-28b4c8594024|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+11:40:40:239 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0606131000019,chargeWaive:false,chargeBranchId:606,deliveryChannel:\"BRANCH\",deliveryChannelDetails:\"Branch\",deliveryChannelId:606,deliveryChannelName:\"Branch\",noOfLeaf:10,referenceNumber:CRC2021102600000008,requestBranchId:606,requestChannel:\"INTERNET\",requestId:CRC2021102600000008,waiveInPercent:0,routingNumberBranchId:\"606\"}, ACT:NULL] PASS
+11:40:41:491 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+11:40:41:492 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+11:40:41:492 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+11:40:41:492 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Creating cheque requisition PASS
+11:40:42:002 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList, NULL] PASS
+11:40:42:005 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {"requisitionId":947,"referenceNumber":"CRC2021102600000008","requestId":"CRC2021102600000008","voucherNumber":220102394346}. PASS
+11:40:42:513 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, requisitionId, OutRequisitionId, NULL] PASS
+11:40:42:513 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Requisition ID 947. PASS
+11:40:42:514 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+11:40:42:514 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+11:40:42:514 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+11:40:42:515 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions/cancel, 3030, NULL] PASS
+11:40:42:516 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62964d6f-b1d4-40a2-83eb-28b4c8594024|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+11:40:42:516 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {referenceNumber:CCN2021102600000003,requestId:CCN2021102600000003,requisitionId:947}, ACT:NULL] PASS
+11:40:43:368 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+11:40:43:368 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+11:40:43:368 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+11:40:43:369 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	POST request for Creating cheque requisition cancel PASS
+11:40:43:873 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2, NULL] PASS
+11:40:43:875 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	All json body {"requisitionId":947,"reverseVoucherNumber":220102394347,"accountNumber":"0606131000019","remarks":"Reverse Successful. Reverse Transaction happened against Previous Voucher No: 220102394346"}. PASS
+11:40:43:875 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+11:40:43:876 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Account Inquiry",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+11:40:43:876 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Account Inquiry, PASS, Cheque_Requisition_Create_Cancel_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+11:40:43:877 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Account Inquiry PASS.
+11:40:43:878 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	11:40:43 AM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

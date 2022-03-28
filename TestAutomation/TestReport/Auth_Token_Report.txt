@@ -1,0 +1,49 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Sunday, December 19, 2021                              |
+|			Test Run Start Time        :	10:32:03:916 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Auth Token
+
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutAllHeaders:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [ALL headers are `OutAllHeaders`.NULL, Auth_Token_Headers.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	ALL headers are `OutAllHeaders`. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutAllResponse:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [Response value {
+    access_token: 62092e7c-7663-47b1-888d-bb421f2a37b4,
+    token_type: bearer,
+    refresh_token: e01d2a7d-5de1-44fd-b614-80ece232289f,
+    expires_in: 3600
+}.NULL, Auth_Token_Response.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Response value {
+    access_token: 62092e7c-7663-47b1-888d-bb421f2a37b4,
+    token_type: bearer,
+    refresh_token: e01d2a7d-5de1-44fd-b614-80ece232289f,
+    expires_in: 3600
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, F-Token, OutFToken, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Extract F Token For The POST request. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Access Token For The POST request. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL]	Return Code --> PASS.
+Test Step 1: REST API Testing for Auth Token  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:32:07:348 AM                                        |
+|			Test Run Duration          :	00:00:03:432                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

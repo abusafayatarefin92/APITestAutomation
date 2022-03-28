@@ -1,0 +1,1 @@
+All json body {"referenceNumber":"SIR2021102500000001","requestId":"SIR2021102500000001","standingInstructionId":235,"responseTime":null,"remark":"Standing Instruction removed successfully"}.

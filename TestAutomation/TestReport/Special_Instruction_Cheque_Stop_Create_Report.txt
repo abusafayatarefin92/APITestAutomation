@@ -1,0 +1,41 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, October 26, 2021                              |
+|			Test Run Start Time        :	06:13:20 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Special Instruction - Cheque Stop Impose, List, Charge List
+
+Test Step 1: UtlDataValueCompare::	Comparison of "200" to "202" with operator EQ FAIL.
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	<RESTAPIRequestDataSetVerify Row 009> :	Comparison of "200" to "202" with operator EQ FAIL
+Test Step 1: ROIFLAGPOST: GET                     :	POST request for Special Instruction - Cheque Stop List FAIL
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body [{"chargeRequest":null,"imposeDate":"2022-01-02","chequeNumberTo":null,"withdrawReason":null,"specialInstructionType":{"activityId":217,"code":"SI2100","name":"Cheque Stop","amountRelated":false,"id":9,"chequeRelated":true},"description":null,"specialInstructionStatus":"IMPOSED","lienReasonCodeId":0,"chequeNumberFrom":null,"chequeNumber":"9948267","lienAmount":null,"chequeDate":null,"verifyBy":null,"chequeAmount":null,"payeeName":null,"createdBy":"apiadmin3","lienWithdrawAmount":null,"demandDepositAccountId":6886,"id":1142,"chequeStopReasonCodeId":0,"withdrawDateTime":null,"withdrawBy":null},{"chargeRequest":null,"imposeDate":"2022-01-02","chequeNumberTo":null,"withdrawReason":null,"specialInstructionType":{"activityId":217,"code":"SI2100","name":"Cheque Stop","amountRelated":false,"id":9,"chequeRelated":true},"description":null,"specialInstructionStatus":"IMPOSED","lienReasonCodeId":0,"chequeNumberFrom":null,"chequeNumber":"9948263","lienAmount":null,"chequeDate":null,"verifyBy":null,"chequeAmount":null,"payeeName":null,"createdBy":"apiadmin3","lienWithdrawAmount":null,"demandDepositAccountId":6886,"id":1151,"chequeStopReasonCodeId":0,"withdrawDateTime":null,"withdrawBy":null},{"chargeRequest":null,"imposeDate":"2021-10-04","chequeNumberTo":null,"withdrawReason":null,"specialInstructionType":{"activityId":217,"code":"SI2100","name":"Cheque Stop","amountRelated":false,"id":9,"chequeRelated":true},"description":null,"specialInstructionStatus":"IMPOSED","lienReasonCodeId":0,"chequeNumberFrom":null,"chequeNumber":"9948269","lienAmount":null,"chequeDate":null,"verifyBy":null,"chequeAmount":null,"payeeName":null,"createdBy":"apiadmin3","lienWithdrawAmount":null,"demandDepositAccountId":6886,"id":1140,"chequeStopReasonCodeId":0,"withdrawDateTime":null,"withdrawBy":null},{"chargeRequest":null,"imposeDate":"2021-08-06","chequeNumberTo":null,"withdrawReason":null,"specialInstructionType":{"activityId":217,"code":"SI2100","name":"Cheque Stop","amountRelated":false,"id":9,"chequeRelated":true},"description":null,"specialInstructionStatus":"IMPOSED","lienReasonCodeId":0,"chequeNumberFrom":null,"chequeNumber":"9948262","lienAmount":null,"chequeDate":null,"verifyBy":null,"chequeAmount":null,"payeeName":null,"createdBy":"apiadmin3","lienWithdrawAmount":null,"demandDepositAccountId":6886,"id":1134,"chequeStopReasonCodeId":0,"withdrawDateTime":null,"withdrawBy":null},{"chargeRequest":null,"imposeDate":"2022-01-02","chequeNumberTo":null,"withdrawReason":null,"specialInstructionType":{"activityId":217,"code":"SI2100","name":"Cheque Stop","amountRelated":false,"id":9,"chequeRelated":true},"description":null,"specialInstructionStatus":"IMPOSED","lienReasonCodeId":0,"chequeNumberFrom":null,"chequeNumber":"9948264","lienAmount":null,"chequeDate":null,"verifyBy":null,"chequeAmount":null,"payeeName":null,"createdBy":"apiadmin3","lienWithdrawAmount":null,"demandDepositAccountId":6886,"id":1152,"chequeStopReasonCodeId":0,"withdrawDateTime":null,"withdrawBy":null},{"chargeRequest":null,"imposeDate":"2021-10-04","chequeNumberTo":null,"withdrawReason":null,"specialInstructionType":{"activityId":217,"code":"SI2100","name":"Cheque Stop","amountRelated":false,"id":9,"chequeRelated":true},"description":null,"specialInstructionStatus":"IMPOSED","lienReasonCodeId":0,"chequeNumberFrom":null,"chequeNumber":"9948268","lienAmount":null,"chequeDate":null,"verifyBy":null,"chequeAmount":null,"payeeName":null,"createdBy":"apiadmin3","lienWithdrawAmount":null,"demandDepositAccountId":6886,"id":1141,"chequeStopReasonCodeId":0,"withdrawDateTime":null,"withdrawBy":null}]. PASS
+Test Step 1: Error Message:	RestApiResponseJsonPathBodyNodeValueGet:: No json root array found in response object's body!!.
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ROOT[1].id, OutId, NULL] FAIL
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	<RESTAPIRequestDataSetVerify Row 011> :	Comparison of "" to "NULL" with operator  FAIL
+Test Step 1: ROIFLAG: EXTRACT                     :	`OutId`. FAIL
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	POST request for Special Instruction - Cheque Stop Charge List PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"chargeAmount":200,"vatAmount":0}. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	Return Code --> FAIL.
+Test Exit:	End Of Test. Overall status FAIL.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	FAIL                                                   |
+|			Test Run End Time          :	06:13:22 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

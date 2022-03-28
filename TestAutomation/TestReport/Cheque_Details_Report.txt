@@ -1,0 +1,212 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, November 10, 2021                           |
+|			Test Run Start Time        :	09:35:07:014 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Cheque Details
+
+Test Step 1: ROIFLAGPOST: RestApiRequestObjectDefi:	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseObjectDef:	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/1781670000006/cheque/9948264, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Cheque Leaf Status PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    "accountNumber": "1781670000006",
+    "chequeNumber": "9948264",
+    "chequePrefix": null,
+    "chequeStatus": "STOPPED",
+    "bookId": 3090,
+    "globalTxnNo": 0,
+    "issueDate": null,
+    "amount": null,
+    "transactionParticulars": null
+}.NULL, Cheque_Leaf_Status.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    "accountNumber": "1781670000006",
+    "chequeNumber": "9948264",
+    "chequePrefix": null,
+    "chequeStatus": "STOPPED",
+    "bookId": 3090,
+    "globalTxnNo": 0,
+    "issueDate": null,
+    "amount": null,
+    "transactionParticulars": null
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/1781670000006/unused-cheques, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Unused cheques PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    "content": [
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948265",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948266",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948270",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}.NULL, Unused_Cheques.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    "content": [
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948265",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948266",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948270",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/1781670000006/books, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Cheque Book Status PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList3:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    "content": [
+        {
+            "id": 3090,
+            "accountId": 6886,
+            "issueDateTime": "2021-08-06T11:39:48.502",
+            "chequePrefix": null,
+            "startLeafNumber": "9948261",
+            "endLeafNumber": "9948270",
+            "chequeBookStatus": "ISSUED",
+            "chequeType": "CHEQUE",
+            "usedCount": null,
+            "unusedCount": null,
+            "stoppedCount": null,
+            "destroyedCount": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}.NULL, Cheque_Book_Status.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    "content": [
+        {
+            "id": 3090,
+            "accountId": 6886,
+            "issueDateTime": "2021-08-06T11:39:48.502",
+            "chequePrefix": null,
+            "startLeafNumber": "9948261",
+            "endLeafNumber": "9948270",
+            "chequeBookStatus": "ISSUED",
+            "chequeType": "CHEQUE",
+            "usedCount": null,
+            "unusedCount": null,
+            "stoppedCount": null,
+            "destroyedCount": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-products/cheque-book-size/098, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Cheque Book Size by Product code PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList4:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body [
+    10,
+    20,
+    50
+].NULL, Cheque_Book_Size_Product.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body [
+    10,
+    20,
+    50
+]. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL]	Return Code --> PASS.
+Test Step 1: REST API Testing for Cheque Details  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	09:35:10:921 AM                                        |
+|			Test Run Duration          :	00:00:03:907                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

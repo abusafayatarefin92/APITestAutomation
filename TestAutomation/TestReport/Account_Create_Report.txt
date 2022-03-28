@@ -1,0 +1,310 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Sunday, December 19, 2021                              |
+|			Test Run Start Time        :	10:32:07:491 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For All Customer Details
+
+Test Step 1: ROIFLAGPOST: RestApiRequestObjectDefi:	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseObjectDef:	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountClassId:2,accountOpeningChannelId:4,branchId:3,businessUnitId:4,ccep:false,contactAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",foreignCity:null,foreignPostOffice:null,foreignState:null,foreignZipCode:null,postCode:\"1209\",state:null,upazilla:\"DHN\",zipCode:null},contactInformation:{alternateMobileNumber:\"01515213836\",countryCode:\"88\",countryCodeForAlterMobile:\"88\",email:\"sample@mail.com\",email2:\"sample@mail.com\",fax:892374524545,mobileNumber:\"01515213836\",phoneNumber:\"01515213836\",residencePhoneNumber:\"01515213836\",telex:892374524545,web:\"sample@mail.com\"},currencyCode:\"BDT\",customerId:7802,debitCard:false,demandDepositAccountTransactionProfiles:[{maxCreditAmountPerTransaction:10000,maxDebitAmountPerTransaction:10000,monthlyTotalCreditTxnAmount:100000,monthlyTotalCreditTxnCount:10,monthlyTotalDebitTxnAmount:100000,monthlyTotalDebitTxnCount:10,transactionProfileDescription:\"Cash (Including Online and ATM)\",transactionProfileMandatory:true,transactionProfileTypeId:1,transactionProfileTypeName:\"CASH\"},{maxCreditAmountPerTransaction:10000,maxDebitAmountPerTransaction:10000,monthlyTotalCreditTxnAmount:100000,monthlyTotalCreditTxnCount:10,monthlyTotalDebitTxnAmount:100000,monthlyTotalDebitTxnCount:10,transactionProfileDescription:\"Transfer/Instrument\",transactionProfileMandatory:true,transactionProfileTypeId:2,transactionProfileTypeName:\"TRANSFER_INSTRUMENT\"}],indicativeRate:0,introducerAccountNumber:\"0003111008119\",minorAccount:false,name:\"Sakib Khan\",nominee:{nominees:[{guardianId:0,individualId:11725,minor:false,nomineeRelationName:\"Brother\",otherRelationName:null,relationWithGuardian:null,sharePercentage:100}]},openingDate:\"2020-10-28\",otherSystemAccount:false,productCode:111,purpose:\"open\",referenceNumber:DEM2021121900000005,requestId:DEM2021121900000005,smsRequired:false}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Demand Deposit Account Create PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    requestId: DEM2021121900000005,
+    referenceNumber: DEM2021121900000005,
+    accountNumber: 0003111009753
+}.NULL, Demand_Deposit_Account_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    requestId: DEM2021121900000005,
+    referenceNumber: DEM2021121900000005,
+    accountNumber: 0003111009753
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, accountNumber, OutDemandDepositAccountNumber, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account number 0003111009753. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/0003111009753, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Demand Deposit account details PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutDemandDepositAccountDetails:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    number: 0003111009753,
+    name: Sakib Khan,
+    productType: DEMAND_DEPOSIT,
+    productCode: 111,
+    productName: MUDARABA SAVINGS DEPOSIT GENERAL,
+    customerId: 7802,
+    openingDate: 2020-10-28,
+    closingDate: null,
+    contactAddress: {
+        addressLine: Dhaka,
+        addressLineTwo: Dhanmondi,
+        divisionId: 1,
+        districtId: 210,
+        upazillaId: 174,
+        postCodeId: 607,
+        zipCodeId: 0,
+        stateId: 0,
+        countryId: 19,
+        foreignState: null,
+        foreignCity: null,
+        foreignPostOffice: null,
+        foreignZipCode: null
+    },
+    branchId: 3,
+    branchName: ABC Branch,
+    phoneNumber: 01515213836,
+    mobileNumber: 01515213836,
+    currencyCode: BDT,
+    freeze: false,
+    currentBalance: 0,
+    blockAmount: 0,
+    clearingAmount: 0,
+    lienAmount: 0,
+    minimumBalance: 0,
+    transactionAllowed: false,
+    lastClientTransactionDate: null,
+    availableBalance: 0,
+    status: ACTIVATED
+}.NULL, Demand_Deposit_Account_Details.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    number: 0003111009753,
+    name: Sakib Khan,
+    productType: DEMAND_DEPOSIT,
+    productCode: 111,
+    productName: MUDARABA SAVINGS DEPOSIT GENERAL,
+    customerId: 7802,
+    openingDate: 2020-10-28,
+    closingDate: null,
+    contactAddress: {
+        addressLine: Dhaka,
+        addressLineTwo: Dhanmondi,
+        divisionId: 1,
+        districtId: 210,
+        upazillaId: 174,
+        postCodeId: 607,
+        zipCodeId: 0,
+        stateId: 0,
+        countryId: 19,
+        foreignState: null,
+        foreignCity: null,
+        foreignPostOffice: null,
+        foreignZipCode: null
+    },
+    branchId: 3,
+    branchName: ABC Branch,
+    phoneNumber: 01515213836,
+    mobileNumber: 01515213836,
+    currencyCode: BDT,
+    freeze: false,
+    currentBalance: 0,
+    blockAmount: 0,
+    clearingAmount: 0,
+    lienAmount: 0,
+    minimumBalance: 0,
+    transactionAllowed: false,
+    lastClientTransactionDate: null,
+    availableBalance: 0,
+    status: ACTIVATED
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, name, OutDemandDepositName, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "Sakib Khan" to "Sakib Khan" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account name `name`. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, productCode, OutDemandDepositProductCode, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "111" to "111" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account ProductCode 111. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, customerId, OutDemandDepositCustomerId, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "7802" to "7802" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account CustomerId 7802. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, openingDate, OutDemandDepositOpeningDate, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "2020-10-28" to "2020-10-28" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account OpeningDate 2020-10-28. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, branchId, OutDemandDepositBranchId, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "3" to "3" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account BranchId 3. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, phoneNumber, OutDemandDepositPhoneNumber, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "01515213836" to "01515213836" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account PhoneNumber 01515213836. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, mobileNumber, OutDemandDepositMobileNumber, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "01515213836" to "01515213836" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account MobileNumber 01515213836. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, currencyCode, OutDemandDepositCurrencyCode, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "BDT" to "BDT" with operator EQ PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Demand deposit account CurrencyCode BDT. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/recurring-deposit-accounts, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountClassId:2,accountOpeningChannelId:4,autoCloseAllowed:false,autoStandingInstructionCreate:true,branchId:3,businessUnitId:4,ccep:false,contactAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},contactInformation:{alternateMobileNumber:\"01515213836\",countryCode:\"88\",countryCodeForAlterMobile:\"88\",email:\"sample@mail.com\",email2:\"sample@mail.com\",fax:892374524545,mobileNumber:\"01515213836\",phoneNumber:\"01515213836\",residencePhoneNumber:\"01515213836\",telex:892374524545,web:\"sample@mail.com\"},currencyCode:\"BDT\",customerId:7802,fundingAccountNumber:\"0003111008896\",fundingAccountType:\"CASA\",indicativeRate:0,instalmentAmount:1000,introducerAccountNumber:\"0003111008119\",minorAccount:false,name:\"Sabbir Khan\",nominee:{nominees:[{guardianId:0,individualId:11725,minor:false,nomineeRelationName:\"Brother\",sharePercentage:100}]},openingDate:\"2020-12-09\",otherSystemAccount:false,productCode:221,purpose:\"open\",referenceNumber:REC2021121900000005,requestId:REC2021121900000005,tenor:12,tenorType:\"MONTHS\"}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Recurring Deposit Account Create PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    requestId: REC2021121900000005,
+    referenceNumber: REC2021121900000005,
+    accountNumber: 0003221001575
+}.NULL, Recurring_Deposit_Account_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    requestId: REC2021121900000005,
+    referenceNumber: REC2021121900000005,
+    accountNumber: 0003221001575
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, accountNumber, OutRecurringDepositAccountNumber, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Recurring deposit account number 0003221001575. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/recurring-deposit-accounts/0003221001575, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Recurring Deposit Account details PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutRecurringDepositAccountDetails:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    number: 0003221001575,
+    accountName: Sabbir Khan,
+    customerId: 7802,
+    type: RECURRING_DEPOSIT,
+    productCode: 221,
+    productName: MUDARABA-MONTHLY DEPOSIT SCHEME MMDS,
+    status: ACTIVATED,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: 1000,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 12,
+    balance: 1000,
+    profitShareRatio: 0.57,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2021-12-08,
+    activationDate: 2020-12-09,
+    closingDate: null
+}.NULL, Recurring_Deposit_Account_Details.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    number: 0003221001575,
+    accountName: Sabbir Khan,
+    customerId: 7802,
+    type: RECURRING_DEPOSIT,
+    productCode: 221,
+    productName: MUDARABA-MONTHLY DEPOSIT SCHEME MMDS,
+    status: ACTIVATED,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: 1000,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 12,
+    balance: 1000,
+    profitShareRatio: 0.57,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2021-12-08,
+    activationDate: 2020-12-09,
+    closingDate: null
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/fixed-deposit-accounts, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {requestId:FIX2021121900000005,referenceNumber:FIX2021121900000005,id:0,name:\"Md. Moshiur Rahman\",customerId:7802,branchId:3,productCode:211,openingDate:\"2020-07-06\",contactInformation:{mobileNumber:\"01551245665\"},contactAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},introducerAccountNumber:\"0990111000032\",otherSystemAccount:false,accountOpeningChannelId:2,currencyCode:\"BDT\",accountClassId:2,minorAccount:false,ccep:false,indicativeRate:0,linkAccountNumber:\"0990111000065\",linkAccountType:\"CASA\",fundingAccountNumber:\"0990111000065\",fundingAccountType:\"CASA\",tenorType:\"MONTHS\",tenor:24,initialDeposit:500,autoRenewAllowed:false,autoCloseAllowed:false,nominee:{nominees:[{id:0,individualId:11998,sharePercentage:100,guardianId:0,nomineeRelationName:\"Mother\",minor:false}]}}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Fixed Deposit Account Create PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList3:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    requestId: FIX2021121900000005,
+    referenceNumber: FIX2021121900000005,
+    accountNumber: 0003211004779
+}.NULL, Fixed_Deposit_Account_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    requestId: FIX2021121900000005,
+    referenceNumber: FIX2021121900000005,
+    accountNumber: 0003211004779
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, accountNumber, OutFixedDepositAccountNumber, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Fixed Deposit Account Number 0003211004779. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/fixed-deposit-accounts/0003211004779, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	GET request for Fixed Deposit Account details PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [GetResponseObj, $ALL, OutFixedDepositAccountDetails:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [Fixed Deposit account details {
+    number: 0003211004779,
+    accountName: Md. Moshiur Rahman,
+    customerId: 7802,
+    type: FIXED_DEPOSIT,
+    productCode: 211,
+    productName: MUDARABA TERM DEPOSIT RECEIPT ,
+    status: INACTIVE,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: null,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 24,
+    balance: 500,
+    profitShareRatio: 0.56,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2022-07-05,
+    activationDate: 2020-07-06,
+    closingDate: null,
+    dueInstallment: null,
+    totalInstallment: null,
+    advanceInstallment: null,
+    givenInstallment: null
+}.NULL, Fixed_Deposit_Account_Details.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Fixed Deposit account details {
+    number: 0003211004779,
+    accountName: Md. Moshiur Rahman,
+    customerId: 7802,
+    type: FIXED_DEPOSIT,
+    productCode: 211,
+    productName: MUDARABA TERM DEPOSIT RECEIPT ,
+    status: INACTIVE,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: null,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 24,
+    balance: 500,
+    profitShareRatio: 0.56,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2022-07-05,
+    activationDate: 2020-07-06,
+    closingDate: null,
+    dueInstallment: null,
+    totalInstallment: null,
+    advanceInstallment: null,
+    givenInstallment: null
+}. PASS
+Test Step 1: REST API Testing for Account Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:32:29:126 AM                                        |
+|			Test Run Duration          :	00:00:21:635                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

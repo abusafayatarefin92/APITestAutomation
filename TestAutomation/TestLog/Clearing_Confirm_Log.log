@@ -1,0 +1,90 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, November 10, 2021                           |
+|			Test Run Start Time        :	10:02:40:878 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+10:02:40:879 Test Step: Test Step 1
+10:02:40:879 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+10:02:40:879 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+10:02:40:880 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+10:02:40:894 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+10:02:40:895 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+10:02:40:956 Test Step: REST API Requests For All Clearing Confirm
+10:02:40:960 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:02:40:960 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:02:40:961 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-transaction, 3030, NULL] PASS
+10:02:40:963 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 543be975-f171-4c79-ad23-8b7b03f9c734|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:02:40:963 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0003111008119,amount:50,currencyCode:\"BDT\",initiatorBranchId:3,narration:Clearing Credit,referenceNumber:CCR2021111000000001,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:CCR2021111000000001,transactionCode:\"401\"}, ACT:NULL] PASS
+10:02:43:486 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:02:43:486 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:02:43:486 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:02:43:487 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Clearing Credit PASS
+10:02:43:996 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+10:02:43:999 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    "requestId": "CCR2021111000000001",
+    "referenceNumber": "CCR2021111000000001",
+    "availableBalance": 4931333,
+    "actualBalance": 5190085.76,
+    "responseDateTime": "2021-11-10T10:03:09.207",
+    "voucherNumber": "220104395938"
+}.NULL, Clearing_Credit.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:02:43:999 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {
+    "requestId": "CCR2021111000000001",
+    "referenceNumber": "CCR2021111000000001",
+    "availableBalance": 4931333,
+    "actualBalance": 5190085.76,
+    "responseDateTime": "2021-11-10T10:03:09.207",
+    "voucherNumber": "220104395938"
+}. PASS
+10:02:44:501 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, voucherNumber, OutVoucherNumber, NULL] PASS
+10:02:44:501 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Voucher number 220104395938. PASS
+10:02:44:502 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:02:44:502 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:02:44:502 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+10:02:44:503 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-transaction, 3030, NULL] PASS
+10:02:44:503 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 543be975-f171-4c79-ad23-8b7b03f9c734|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:02:44:504 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {additionalInfo:{placementVoucher:220104395938},accountNumber:0003111008119,currencyCode:\"BDT\",initiatorBranchId:3,narration:Clearing Confirm,referenceNumber:CCN2021111000000001,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:CCN2021111000000001,transactionCode:\"402\"}, ACT:NULL] PASS
+10:02:45:659 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:02:45:660 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:02:45:660 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:02:45:660 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	POST request for Clearing Confirm PASS
+10:02:46:171 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+10:02:46:196 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    "requestId": "CCN2021111000000001",
+    "referenceNumber": "CCN2021111000000001",
+    "availableBalance": 4931383,
+    "actualBalance": 5190135.76,
+    "responseDateTime": "2021-11-10T10:03:11.471",
+    "voucherNumber": "220104395939"
+}.NULL, Clearing_Confirm.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:02:46:196 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	All json body {
+    "requestId": "CCN2021111000000001",
+    "referenceNumber": "CCN2021111000000001",
+    "availableBalance": 4931383,
+    "actualBalance": 5190135.76,
+    "responseDateTime": "2021-11-10T10:03:11.471",
+    "voucherNumber": "220104395939"
+}. PASS
+10:02:46:196 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+10:02:46:197 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Clearing Confirm",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+10:02:46:198 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Clearing Confirm, PASS, Clearing_Confirm_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+10:02:46:198 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Clearing Confirm PASS.
+10:02:46:199 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:02:46:200 AM                                        |
+|			Test Run Duration          :	00:00:05:322                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

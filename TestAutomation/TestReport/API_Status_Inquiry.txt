@@ -1,0 +1,8 @@
+{
+    "requestId": "ATM2021021800000001",
+    "referenceNumber": "ATM2021021800000001",
+    "availableBalance": 980316.79,
+    "actualBalance": 988401.79,
+    "responseDateTime": "2021-02-18T15:21:55.395",
+    "voucherNumber": "20072176195"
+}.

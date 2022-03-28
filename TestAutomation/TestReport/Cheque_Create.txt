@@ -1,0 +1,6 @@
+{
+    requestId: CBC2021120900000002,
+    referenceNumber: CBC2021120900000002,
+    responseDateTime: 2021-12-09T11:28:28.716,
+    chequeReferenceNo: 515
+}.

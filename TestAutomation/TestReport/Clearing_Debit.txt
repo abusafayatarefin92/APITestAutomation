@@ -1,0 +1,48 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Monday, October 25, 2021                               |
+|			Test Run Start Time        :	02:26:33 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	v.N.L                                                  |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	Google Chrome                                          |
+|			Web Browser Version        :	83.0.4103.97 (Official Build) (64-bit)                 |
+|			Test Tool Name             :	Selenium (Web Driver)                                  |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For All Customer Details
+
+Test Step 1: ROIFLAG: EXTRACT                     :	ALL headers are Access-Control-Allow-Credentials: true | Access-Control-Allow-Headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,verifier | Access-Control-Allow-Methods: HEAD, PUT, PATCH, TRACE, POST, GET, OPTIONS, DELETE | Access-Control-Allow-Origin: * | Access-Control-Max-Age: 3600 | Content-Type: application/json;charset=UTF-8 | Date: Mon, 25 Oct 2021 08:27:01 GMT | F-Token: 3692f125-8b73-4eeb-ac87-d5e42a7adcae | Content-Length: 150. PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Extract F Token For The POST request. PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Access Token For The POST request. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Hold amount PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"responseDateTime":"2021-10-25T14:27:02.4","referenceNumber":"HLD2021102500000003","requestId":"HLD2021102500000003","actualBalance":5190245.76,"holdReferenceNo":"1574","availableBalance":4931443}. PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	1574. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Unhold amount PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"responseDateTime":"2021-10-25T14:27:03.991","referenceNumber":"UHL2021102500000003","requestId":"UHL2021102500000003","actualBalance":5190245.76,"holdReferenceNo":"1574","availableBalance":4931493}. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Clearing Debit PASS
+All json body {"responseDateTime":"2021-10-25T14:27:05.379","referenceNumber":"CDB2021102500000003","requestId":"CDB2021102500000003","actualBalance":5190195.76,"voucherNumber":"220102394257","availableBalance":4931443}.
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"responseDateTime":"2021-10-25T14:27:05.379","referenceNumber":"CDB2021102500000003","requestId":"CDB2021102500000003","actualBalance":5190195.76,"voucherNumber":"220102394257","availableBalance":4931443}. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Dishonor Charge PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"responseDateTime":"2021-10-25T14:27:06.794","referenceNumber":"CDH2021102500000007","requestId":"RequestIdDishonor","actualBalance":5190165.76,"voucherNumber":"220102394258","availableBalance":4931413}. PASS
+Test Step 1: REST API Testing for Account Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	02:26:41 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|
+All json body {"responseDateTime":"2021-10-25T18:18:50.238","referenceNumber":"CDB2021102500000004","requestId":"CDB2021102500000004","actualBalance":5190115.76,"voucherNumber":"220102394313","availableBalance":4931363}.

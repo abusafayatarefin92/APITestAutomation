@@ -1,0 +1,37 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Monday, October 25, 2021                               |
+|			Test Run Start Time        :	03:59:52 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Fund Transfer
+
+Test Step 1: ROIFLAG: EXTRACT                     :	ALL headers are Access-Control-Allow-Credentials: true | Access-Control-Allow-Headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,verifier | Access-Control-Allow-Methods: HEAD, PUT, PATCH, TRACE, POST, GET, OPTIONS, DELETE | Access-Control-Allow-Origin: * | Access-Control-Max-Age: 3600 | Content-Type: application/json;charset=UTF-8 | Date: Mon, 25 Oct 2021 10:00:16 GMT | F-Token: 3692f125-8b73-4eeb-ac87-d5e42a7adcae | Content-Length: 150. PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Extract F Token For The POST request. PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Authentication response {"access_token":"79729a1c-76ba-4c1c-b1a5-848c507499aa","refresh_token":"1d5e41b2-434a-4a47-8e39-8dc8e30b0bbd","token_type":"bearer","expires_in":3600} PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Access Token For The POST request. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	POST request for Instrument Status PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	{"paymentUser":"arefin","payeeAccountNo":"104180004","purchaseRemark":null,"paymentVoucher":20102678054,"instrumentProduct":"PO","draweeBranchId":18,"refundVoucher":0,"branch":18,"purchaserAddress":"GA - 87, Middle Badda","lostDateTime":null,"payeeName":"Kashem","exchangeRate":null,"lostUser":null,"lostRemark":null,"refundRemark":null,"purchaserNid":"1122334455667","payeeNid":null,"id":1556,"paymentDateTime":"2020-10-26T15:13:46.798","withdrawLostRemark":null,"payeeMobile":"01283947651","refundBranch":0,"purchaseMethod":"ACCOUNT","paymentBranch":0,"refundUser":null,"instrumentType":"OTHER","withdrawLostUser":null,"instrumentNo":"0000201","purchaserName":"Mahbub Hossain Amin - BDT","purchaseAmount":10,"payeeAddress":"Dhaka","refundDateTime":null,"purchaseDateTime":"2020-10-26T15:05:39.541","destroyUser":null,"purchaseVoucher":20102678052,"purchaserAccountNo":"0003111006999","purchaseUser":"arefin384","paymentMethod":"GL","destroyDateTime":null,"currencyCode":"BDT","purchaserMobile":"01923258139","withdrawLostDateTime":null,"status":"PAID","destroyRemark":null}. PASS
+Test Step 1: REST API Testing for Account Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	03:59:53 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

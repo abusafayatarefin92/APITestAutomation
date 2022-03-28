@@ -1,0 +1,407 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, November 09, 2021                             |
+|			Test Run Start Time        :	05:12:40:818 PM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Cheque Requisition Create, Status, Charge List, Delivery Channels
+
+Test Step 1: ROIFLAGPOST: RestApiRequestObjectDefi:	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseObjectDef:	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 65cdbcac-9e2b-4f1c-b9b4-5dc0f8b73af8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0606131000019,chargeWaive:false,chargeBranchId:606,deliveryChannel:\"BRANCH\",deliveryChannelDetails:\"Branch\",deliveryChannelId:606,deliveryChannelName:\"Branch\",noOfLeaf:10,referenceNumber:CRC2021110900000001,requestBranchId:606,requestChannel:\"INTERNET\",requestId:CRC2021110900000001,waiveInPercent:0,routingNumberBranchId:\"606\"}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: UtlDataValueCompare::	Comparison of "500" to "200" with operator EQ FAIL.
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	<RESTAPIRequestDataSetVerify Row 005> :	Comparison of "500" to "200" with operator EQ FAIL
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating cheque requisition FAIL
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    "status": "INTERNAL_SERVER_ERROR",
+    "timestamp": "09-11-2021 17:13:08",
+    "code": "0000000",
+    "module": "000",
+    "message": "Index: 0, Size: 0",
+    "debugMessage": null,
+    "errors": null
+}.NULL, Cheque_Requisition_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    "status": "INTERNAL_SERVER_ERROR",
+    "timestamp": "09-11-2021 17:13:08",
+    "code": "0000000",
+    "module": "000",
+    "message": "Index: 0, Size: 0",
+    "debugMessage": null,
+    "errors": null
+}. PASS
+Test Step 1: Error Message:	RestApiResponseJsonPathBodyNodeValueGet:: No requisitionId named json node found in response object's body!!.
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, requisitionId, OutRequisitionId, NULL] FAIL
+Test Step 1: ROIFLAG: EXTRACT                     :	Requisition ID `OutRequisitionId`. FAIL
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions/account, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 65cdbcac-9e2b-4f1c-b9b4-5dc0f8b73af8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0606131000019,requisitionStatus:\"REQUISITION\"}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "202" to "202" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating cheque requisition status by account PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body [
+    {
+        "id": 941,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 942,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 943,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 944,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 945,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    }
+].NULL, Cheque_Requisition_Status_Account.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body [
+    {
+        "id": 941,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 942,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 943,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 944,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    },
+    {
+        "id": 945,
+        "accountNumber": "0606131000019",
+        "submittingDate": "2021-10-26",
+        "submittingBranchId": 606,
+        "submittingBranchName": "Bogra Corporate Branch",
+        "deliveryBranchId": 606,
+        "deliveryBranchName": "Bogra Corporate Branch",
+        "requisitionStatus": "REQUISITION",
+        "requestChannel": "INTERNET",
+        "noOfLeaf": 10,
+        "startLeaf": 0,
+        "endLeaf": 0,
+        "transactionCode": null,
+        "chequePrefix": null,
+        "status": null,
+        "lostRemarks": null,
+        "foundRemarks": null,
+        "destroyRemarks": null,
+        "routingNumber": null,
+        "routingNumberBranchId": "606",
+        "deliveryChannel": "BRANCH",
+        "deliveryChannelId": 606,
+        "deliveryChannelName": "Branch",
+        "deliveryChannelDetails": "Branch",
+        "chargeBranchId": 606
+    }
+]. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions/`OutRequisitionId`, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 65cdbcac-9e2b-4f1c-b9b4-5dc0f8b73af8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, GET, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: UtlDataValueCompare::	Comparison of "400" to "200" with operator EQ FAIL.
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	<RESTAPIRequestDataSetVerify Row 014> :	Comparison of "400" to "200" with operator EQ FAIL
+Test Step 1: ROIFLAGPOST: GET                     :	POST request for Creating cheque requisition status by requisition id FAIL
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList3:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    "status": "BAD_REQUEST",
+    "timestamp": "09-11-2021 17:13:10",
+    "code": "0000000",
+    "module": "000",
+    "message": "The parameter 'requisitionId' of value '`OutRequisitionId`' could not be converted to type 'Long'",
+    "debugMessage": "Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \"`OutRequisitionId`\"",
+    "errors": null
+}.NULL, Cheque_Requisition_Status_RequisitionId.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    "status": "BAD_REQUEST",
+    "timestamp": "09-11-2021 17:13:10",
+    "code": "0000000",
+    "module": "000",
+    "message": "The parameter 'requisitionId' of value '`OutRequisitionId`' could not be converted to type 'Long'",
+    "debugMessage": "Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \"`OutRequisitionId`\"",
+    "errors": null
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions/charge/0606131000019/10, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 65cdbcac-9e2b-4f1c-b9b4-5dc0f8b73af8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, GET, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: UtlDataValueCompare::	Comparison of "500" to "200" with operator EQ FAIL.
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	<RESTAPIRequestDataSetVerify Row 018> :	Comparison of "500" to "200" with operator EQ FAIL
+Test Step 1: ROIFLAGPOST: GET                     :	POST request for Creating cheque requisition charge list FAIL
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList4:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    "status": "INTERNAL_SERVER_ERROR",
+    "timestamp": "09-11-2021 17:13:11",
+    "code": "0000000",
+    "module": "000",
+    "message": "Index: 0, Size: 0",
+    "debugMessage": null,
+    "errors": null
+}.NULL, Cheque_Requisition_Charge_List.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    "status": "INTERNAL_SERVER_ERROR",
+    "timestamp": "09-11-2021 17:13:11",
+    "code": "0000000",
+    "module": "000",
+    "message": "Index: 0, Size: 0",
+    "debugMessage": null,
+    "errors": null
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-cheque-requisition/api/cheque-requisitions/delivery-channels, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 65cdbcac-9e2b-4f1c-b9b4-5dc0f8b73af8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, GET, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: GET                     :	POST request for Creating cheque requisition Delivery channels PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList5:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body [
+    "BRANCH"
+].NULL, Cheque_Requisition_Delivery_Channels.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body [
+    "BRANCH"
+]. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	Return Code --> FAIL.
+Test Exit:	End Of Test. Overall status FAIL.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	FAIL                                                   |
+|			Test Run End Time          :	05:12:46:371 PM                                        |
+|			Test Run Duration          :	00:00:05:553                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

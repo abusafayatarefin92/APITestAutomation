@@ -1,0 +1,11 @@
+All json body {
+    "accountNumber": "1781670000006",
+    "chequeNumber": "9948264",
+    "chequePrefix": null,
+    "chequeStatus": "STOPPED",
+    "bookId": 3090,
+    "globalTxnNo": 0,
+    "issueDate": null,
+    "amount": null,
+    "transactionParticulars": null
+}.

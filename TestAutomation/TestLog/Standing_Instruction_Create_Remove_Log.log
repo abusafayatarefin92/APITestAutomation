@@ -1,0 +1,62 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, October 26, 2021                              |
+|			Test Run Start Time        :	02:33:17 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+14:33:17:972 Test Step: Test Step 1
+14:33:17:972 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+14:33:17:972 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+14:33:17:973 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+14:33:17:992 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+14:33:17:992 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+14:33:18:059 Test Step: REST API Requests For Standing Instruction Create, Remove
+14:33:18:061 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+14:33:18:061 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+14:33:18:061 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/standing-instructions, 3030, NULL] PASS
+14:33:18:064 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer de382216-a586-45a0-a1d7-d2173cafa775|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+14:33:18:065 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {amount:11,creditAccountNumber:0606211002674,creditAccountType:DEMAND_DEPOSIT,debitAccountNumber:0801111002804,executionPartiallyAllowed:true,expiryDate:\"2021-08-06\",frequency:ONCE,note:\"Once\",referenceNumber:STI2021092500000003,requestId:STI2021092500000003,startDate:\"2021-08-06\"}, ACT:NULL] PASS
+14:33:19:178 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+14:33:19:179 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+14:33:19:179 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+14:33:19:179 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Creating Standing Instruction PASS
+14:33:19:690 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList, NULL] PASS
+14:33:19:692 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {"referenceNumber":"STI2021092500000003","requestId":"STI2021092500000003","standingInstructionId":235}. PASS
+14:33:20:200 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, standingInstructionId, OutStandingInstructionId, NULL] PASS
+14:33:20:200 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	235. PASS
+14:33:20:201 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+14:33:20:201 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+14:33:20:201 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+14:33:20:202 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/standing-instructions/remove, 3030, NULL] PASS
+14:33:20:203 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer de382216-a586-45a0-a1d7-d2173cafa775|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+14:33:20:203 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {referenceNumber:SIR2021102500000001,requestId:SIR2021102500000001,standingInstructionId:235}, ACT:NULL] PASS
+14:33:20:634 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+14:33:20:634 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+14:33:20:634 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+14:33:20:634 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	POST request for Standing Instruction Remove PASS
+14:33:21:140 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2, NULL] PASS
+14:33:21:160 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	All json body {"referenceNumber":"SIR2021102500000001","requestId":"SIR2021102500000001","standingInstructionId":235,"responseTime":null,"remark":"Standing Instruction removed successfully"}. PASS
+14:33:21:160 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+14:33:21:161 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Account Inquiry",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+14:33:21:161 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Account Inquiry, PASS, Standing_Instruction_Create_Remove_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+14:33:21:162 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Account Inquiry PASS.
+14:33:21:164 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	02:33:21 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

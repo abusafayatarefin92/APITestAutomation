@@ -1,0 +1,6 @@
+{
+    requestId: CBD2021120800000101,
+    referenceNumber: CBD2021120800000101,
+    responseDateTime: 2021-12-08T15:51:24.126,
+    chequeReferenceNo: 513
+}.

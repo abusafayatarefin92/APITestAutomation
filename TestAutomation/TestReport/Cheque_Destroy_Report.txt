@@ -1,0 +1,130 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, December 08, 2021                           |
+|			Test Run Start Time        :	03:50:53:209 PM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Cheque Destroy
+
+Test Step 1: ROIFLAGPOST: RestApiRequestObjectDefi:	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseObjectDef:	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-account-inquiry, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer d2fa2bdc-443d-4e3a-89b5-9e677a03a56b|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0304098000025,referenceNumber:INQ2021120800000127,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:INQ2021120800000127}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Account Inquiry PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutListInquiry1:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    requestId: INQ2021120800000127,
+    referenceNumber: INQ2021120800000127,
+    availableBalance: 90445.44,
+    actualBalance: 90445.44,
+    responseDateTime: 2021-12-08T15:51:20.33,
+    voucherNumber: null,
+    accountName:  Shuvo,
+    accountNumber: 0304098000025,
+    currencyCode: BDT,
+    productCode: 098,
+    accountStatus: ACTIVATED,
+    accountType: DEMAND_DEPOSIT,
+    branchId: 304,
+    customerId: 7812,
+    conatactNumber: 01715354337,
+    addressLineOne: Single Colony, Retail Market, Dhaka,
+    addressLineTwo: null,
+    countryName: Bangladesh,
+    divisionName: Rajshahi,
+    districtName: SHARIATPUR,
+    upazilaName: null,
+    postalCode: null
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, availableBalance, OutAvailableBalance1, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Available Balance 90445.44. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, actualBalance, OutActualBalance1, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Actual Balance 90445.44. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/create, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer d2fa2bdc-443d-4e3a-89b5-9e677a03a56b|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0304098000025,chequePrefix:NULL,chequeType:CHEQUE,endLeafNumber:9948410,referenceNumber:CBC2021120800000101,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:CBC2021120800000101,startLeafNumber:9948401}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating cheque leaf PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [{
+    requestId: CBC2021120800000101,
+    referenceNumber: CBC2021120800000101,
+    responseDateTime: 2021-12-08T15:51:22.137,
+    chequeReferenceNo: 513
+}.NULL, Cheque_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	{
+    requestId: CBC2021120800000101,
+    referenceNumber: CBC2021120800000101,
+    responseDateTime: 2021-12-08T15:51:22.137,
+    chequeReferenceNo: 513
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, chequeReferenceNo, OutChequeReferenceNo, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body 513. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/destroy, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer d2fa2bdc-443d-4e3a-89b5-9e677a03a56b|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {chequeBookId:513,destroyingBranch:304,referenceNumber:CBD2021120800000101,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:CBD2021120800000101}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating cheque leaf PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [{
+    requestId: CBD2021120800000101,
+    referenceNumber: CBD2021120800000101,
+    responseDateTime: 2021-12-08T15:51:24.126,
+    chequeReferenceNo: 513
+}.NULL, Cheque_Destroy.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	{
+    requestId: CBD2021120800000101,
+    referenceNumber: CBD2021120800000101,
+    responseDateTime: 2021-12-08T15:51:24.126,
+    chequeReferenceNo: 513
+}. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-account-inquiry, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer d2fa2bdc-443d-4e3a-89b5-9e677a03a56b|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0304098000025,referenceNumber:INQ2021120800000128,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:INQ2021120800000128}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Account Inquiry PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutListInquiry2, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {branchId:304,responseDateTime:2021-12-08T15:51:24.952,districtName:SHARIATPUR,accountName: Shuvo,accountType:DEMAND_DEPOSIT,postalCode:null,addressLineOne:Single Colony, Retail Market, Dhaka,divisionName:Rajshahi,accountNumber:0304098000025,conatactNumber:01715354337,availableBalance:90330.44,upazilaName:null,accountStatus:ACTIVATED,addressLineTwo:null,productCode:098,referenceNumber:INQ2021120800000128,requestId:INQ2021120800000128,actualBalance:90330.44,voucherNumber:null,customerId:7812,countryName:Bangladesh,currencyCode:BDT}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, availableBalance, OutAvailableBalance2, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Available Balance 90330.44. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, actualBalance, OutActualBalance2, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Actual Balance 90330.44. PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [1500/100, OutTotalVAT:ROUNDOFF=DEFAULT, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "15.00" to "NULL" with operator NE PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Total VAT 15.00. PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [90445.44-(100+15.00), OutDiffAvailableBalance, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "90330.44" to "90330.44" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Calculative amount90330.44 and new available balance 90330.44. PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [90445.44-(100+15.00), OutDiffActualBalance, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "90330.44" to "90330.44" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Calculative amount90330.44 and new available balance 90330.44. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL]	Return Code --> PASS.
+Test Step 1: REST API Testing for Cheque Destroy  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	03:50:59:984 PM                                        |
+|			Test Run Duration          :	00:00:06:775                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

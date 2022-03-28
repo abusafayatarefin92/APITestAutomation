@@ -1,0 +1,36 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, October 26, 2021                              |
+|			Test Run Start Time        :	11:40:40 AM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Cheque Requisition Create, Cancel
+
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating cheque requisition PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"requisitionId":947,"referenceNumber":"CRC2021102600000008","requestId":"CRC2021102600000008","voucherNumber":220102394346}. PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Requisition ID 947. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating cheque requisition cancel PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"requisitionId":947,"reverseVoucherNumber":220102394347,"accountNumber":"0606131000019","remarks":"Reverse Successful. Reverse Transaction happened against Previous Voucher No: 220102394346"}. PASS
+Test Step 1: REST API Testing for Account Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	11:40:43 AM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

@@ -1,0 +1,384 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Sunday, December 19, 2021                              |
+|			Test Run Start Time        :	10:32:07:491 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+10:32:07:493 Test Step: Test Step 1
+10:32:07:493 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+10:32:07:493 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+10:32:07:494 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+10:32:07:496 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+10:32:07:496 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+10:32:07:624 Test Step: REST API Requests For All Customer Details
+10:32:07:627 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:32:07:628 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:32:07:628 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts, 3030, NULL] PASS
+10:32:07:630 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:07:633 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountClassId:2,accountOpeningChannelId:4,branchId:3,businessUnitId:4,ccep:false,contactAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",foreignCity:null,foreignPostOffice:null,foreignState:null,foreignZipCode:null,postCode:\"1209\",state:null,upazilla:\"DHN\",zipCode:null},contactInformation:{alternateMobileNumber:\"01515213836\",countryCode:\"88\",countryCodeForAlterMobile:\"88\",email:\"sample@mail.com\",email2:\"sample@mail.com\",fax:892374524545,mobileNumber:\"01515213836\",phoneNumber:\"01515213836\",residencePhoneNumber:\"01515213836\",telex:892374524545,web:\"sample@mail.com\"},currencyCode:\"BDT\",customerId:7802,debitCard:false,demandDepositAccountTransactionProfiles:[{maxCreditAmountPerTransaction:10000,maxDebitAmountPerTransaction:10000,monthlyTotalCreditTxnAmount:100000,monthlyTotalCreditTxnCount:10,monthlyTotalDebitTxnAmount:100000,monthlyTotalDebitTxnCount:10,transactionProfileDescription:\"Cash (Including Online and ATM)\",transactionProfileMandatory:true,transactionProfileTypeId:1,transactionProfileTypeName:\"CASH\"},{maxCreditAmountPerTransaction:10000,maxDebitAmountPerTransaction:10000,monthlyTotalCreditTxnAmount:100000,monthlyTotalCreditTxnCount:10,monthlyTotalDebitTxnAmount:100000,monthlyTotalDebitTxnCount:10,transactionProfileDescription:\"Transfer/Instrument\",transactionProfileMandatory:true,transactionProfileTypeId:2,transactionProfileTypeName:\"TRANSFER_INSTRUMENT\"}],indicativeRate:0,introducerAccountNumber:\"0003111008119\",minorAccount:false,name:\"Sakib Khan\",nominee:{nominees:[{guardianId:0,individualId:11725,minor:false,nomineeRelationName:\"Brother\",otherRelationName:null,relationWithGuardian:null,sharePercentage:100}]},openingDate:\"2020-10-28\",otherSystemAccount:false,productCode:111,purpose:\"open\",referenceNumber:DEM2021121900000005,requestId:DEM2021121900000005,smsRequired:false}, ACT:NULL] PASS
+10:32:08:362 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:32:08:362 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:08:362 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:08:362 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Demand Deposit Account Create PASS
+10:32:08:879 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+10:32:08:882 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    requestId: DEM2021121900000005,
+    referenceNumber: DEM2021121900000005,
+    accountNumber: 0003111009753
+}.NULL, Demand_Deposit_Account_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:08:883 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {
+    requestId: DEM2021121900000005,
+    referenceNumber: DEM2021121900000005,
+    accountNumber: 0003111009753
+}. PASS
+10:32:09:384 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, accountNumber, OutDemandDepositAccountNumber, NULL] PASS
+10:32:09:384 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Demand deposit account number 0003111009753. PASS
+10:32:09:385 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+10:32:09:385 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+10:32:09:385 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL, NULL, NULL, NULL] PASS
+10:32:09:386 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/0003111009753, 3030, NULL] PASS
+10:32:09:387 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:09:577 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+10:32:09:577 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:09:578 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:09:578 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	GET request for Demand Deposit account details PASS
+10:32:10:087 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutDemandDepositAccountDetails:PRETTYFORMAT, NULL] PASS
+10:32:10:089 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    number: 0003111009753,
+    name: Sakib Khan,
+    productType: DEMAND_DEPOSIT,
+    productCode: 111,
+    productName: MUDARABA SAVINGS DEPOSIT GENERAL,
+    customerId: 7802,
+    openingDate: 2020-10-28,
+    closingDate: null,
+    contactAddress: {
+        addressLine: Dhaka,
+        addressLineTwo: Dhanmondi,
+        divisionId: 1,
+        districtId: 210,
+        upazillaId: 174,
+        postCodeId: 607,
+        zipCodeId: 0,
+        stateId: 0,
+        countryId: 19,
+        foreignState: null,
+        foreignCity: null,
+        foreignPostOffice: null,
+        foreignZipCode: null
+    },
+    branchId: 3,
+    branchName: ABC Branch,
+    phoneNumber: 01515213836,
+    mobileNumber: 01515213836,
+    currencyCode: BDT,
+    freeze: false,
+    currentBalance: 0,
+    blockAmount: 0,
+    clearingAmount: 0,
+    lienAmount: 0,
+    minimumBalance: 0,
+    transactionAllowed: false,
+    lastClientTransactionDate: null,
+    availableBalance: 0,
+    status: ACTIVATED
+}.NULL, Demand_Deposit_Account_Details.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:10:090 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	All json body {
+    number: 0003111009753,
+    name: Sakib Khan,
+    productType: DEMAND_DEPOSIT,
+    productCode: 111,
+    productName: MUDARABA SAVINGS DEPOSIT GENERAL,
+    customerId: 7802,
+    openingDate: 2020-10-28,
+    closingDate: null,
+    contactAddress: {
+        addressLine: Dhaka,
+        addressLineTwo: Dhanmondi,
+        divisionId: 1,
+        districtId: 210,
+        upazillaId: 174,
+        postCodeId: 607,
+        zipCodeId: 0,
+        stateId: 0,
+        countryId: 19,
+        foreignState: null,
+        foreignCity: null,
+        foreignPostOffice: null,
+        foreignZipCode: null
+    },
+    branchId: 3,
+    branchName: ABC Branch,
+    phoneNumber: 01515213836,
+    mobileNumber: 01515213836,
+    currencyCode: BDT,
+    freeze: false,
+    currentBalance: 0,
+    blockAmount: 0,
+    clearingAmount: 0,
+    lienAmount: 0,
+    minimumBalance: 0,
+    transactionAllowed: false,
+    lastClientTransactionDate: null,
+    availableBalance: 0,
+    status: ACTIVATED
+}. PASS
+10:32:10:590 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, name, OutDemandDepositName, NULL] PASS
+10:32:10:590 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	Comparison of "Sakib Khan" to "Sakib Khan" with operator EQ PASS
+10:32:10:591 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	Demand deposit account name `name`. PASS
+10:32:11:099 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, productCode, OutDemandDepositProductCode, NULL] PASS
+10:32:11:099 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	Comparison of "111" to "111" with operator EQ PASS
+10:32:11:099 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	Demand deposit account ProductCode 111. PASS
+10:32:11:614 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, customerId, OutDemandDepositCustomerId, NULL] PASS
+10:32:11:614 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	Comparison of "7802" to "7802" with operator EQ PASS
+10:32:11:615 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	Demand deposit account CustomerId 7802. PASS
+10:32:12:123 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 015> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, openingDate, OutDemandDepositOpeningDate, NULL] PASS
+10:32:12:124 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 015> RestApiGroupRequestResponseValidate::	Comparison of "2020-10-28" to "2020-10-28" with operator EQ PASS
+10:32:12:124 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 015> RestApiGroupRequestResponseValidate::	Demand deposit account OpeningDate 2020-10-28. PASS
+10:32:12:633 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 016> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, branchId, OutDemandDepositBranchId, NULL] PASS
+10:32:12:633 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 016> RestApiGroupRequestResponseValidate::	Comparison of "3" to "3" with operator EQ PASS
+10:32:12:633 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 016> RestApiGroupRequestResponseValidate::	Demand deposit account BranchId 3. PASS
+10:32:13:142 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, phoneNumber, OutDemandDepositPhoneNumber, NULL] PASS
+10:32:13:142 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	Comparison of "01515213836" to "01515213836" with operator EQ PASS
+10:32:13:142 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	Demand deposit account PhoneNumber 01515213836. PASS
+10:32:13:651 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, mobileNumber, OutDemandDepositMobileNumber, NULL] PASS
+10:32:13:651 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	Comparison of "01515213836" to "01515213836" with operator EQ PASS
+10:32:13:651 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	Demand deposit account MobileNumber 01515213836. PASS
+10:32:14:163 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, currencyCode, OutDemandDepositCurrencyCode, NULL] PASS
+10:32:14:163 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	Comparison of "BDT" to "BDT" with operator EQ PASS
+10:32:14:164 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	Demand deposit account CurrencyCode BDT. PASS
+10:32:14:165 ROIFLAG: RestApiRequestObjectDefine               :	<RESTAPIRequestDataSetVerify Row 021> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:32:14:165 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 021> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:32:14:165 ROIFLAG: RestApiRequestUrlPathSet                 :	<RESTAPIRequestDataSetVerify Row 021> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+10:32:14:167 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/recurring-deposit-accounts, 3030, NULL] PASS
+10:32:14:168 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:14:169 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountClassId:2,accountOpeningChannelId:4,autoCloseAllowed:false,autoStandingInstructionCreate:true,branchId:3,businessUnitId:4,ccep:false,contactAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},contactInformation:{alternateMobileNumber:\"01515213836\",countryCode:\"88\",countryCodeForAlterMobile:\"88\",email:\"sample@mail.com\",email2:\"sample@mail.com\",fax:892374524545,mobileNumber:\"01515213836\",phoneNumber:\"01515213836\",residencePhoneNumber:\"01515213836\",telex:892374524545,web:\"sample@mail.com\"},currencyCode:\"BDT\",customerId:7802,fundingAccountNumber:\"0003111008896\",fundingAccountType:\"CASA\",indicativeRate:0,instalmentAmount:1000,introducerAccountNumber:\"0003111008119\",minorAccount:false,name:\"Sabbir Khan\",nominee:{nominees:[{guardianId:0,individualId:11725,minor:false,nomineeRelationName:\"Brother\",sharePercentage:100}]},openingDate:\"2020-12-09\",otherSystemAccount:false,productCode:221,purpose:\"open\",referenceNumber:REC2021121900000005,requestId:REC2021121900000005,tenor:12,tenorType:\"MONTHS\"}, ACT:NULL] PASS
+10:32:15:630 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:32:15:631 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:15:631 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:15:631 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 022> RestApiGroupRequestResponseValidate::	POST request for Recurring Deposit Account Create PASS
+10:32:16:139 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 023> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+10:32:16:142 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 023> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    requestId: REC2021121900000005,
+    referenceNumber: REC2021121900000005,
+    accountNumber: 0003221001575
+}.NULL, Recurring_Deposit_Account_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:16:142 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 023> RestApiGroupRequestResponseValidate::	All json body {
+    requestId: REC2021121900000005,
+    referenceNumber: REC2021121900000005,
+    accountNumber: 0003221001575
+}. PASS
+10:32:16:644 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 024> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, accountNumber, OutRecurringDepositAccountNumber, NULL] PASS
+10:32:16:644 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 024> RestApiGroupRequestResponseValidate::	Recurring deposit account number 0003221001575. PASS
+10:32:16:645 ROIFLAG: RestApiRequestObjectDefine               :	<RESTAPIRequestDataSetVerify Row 026> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+10:32:16:645 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 026> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+10:32:16:645 ROIFLAG: RestApiRequestUrlPathSet                 :	<RESTAPIRequestDataSetVerify Row 026> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL, NULL, NULL, NULL] PASS
+10:32:16:645 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 027> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/recurring-deposit-accounts/0003221001575, 3030, NULL] PASS
+10:32:16:646 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 027> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:16:772 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 027> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+10:32:16:772 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 027> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:16:772 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 027> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:16:773 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 027> RestApiGroupRequestResponseValidate::	GET request for Recurring Deposit Account details PASS
+10:32:17:281 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 028> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutRecurringDepositAccountDetails:PRETTYFORMAT, NULL] PASS
+10:32:17:283 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 028> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    number: 0003221001575,
+    accountName: Sabbir Khan,
+    customerId: 7802,
+    type: RECURRING_DEPOSIT,
+    productCode: 221,
+    productName: MUDARABA-MONTHLY DEPOSIT SCHEME MMDS,
+    status: ACTIVATED,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: 1000,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 12,
+    balance: 1000,
+    profitShareRatio: 0.57,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2021-12-08,
+    activationDate: 2020-12-09,
+    closingDate: null
+}.NULL, Recurring_Deposit_Account_Details.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:17:283 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 028> RestApiGroupRequestResponseValidate::	All json body {
+    number: 0003221001575,
+    accountName: Sabbir Khan,
+    customerId: 7802,
+    type: RECURRING_DEPOSIT,
+    productCode: 221,
+    productName: MUDARABA-MONTHLY DEPOSIT SCHEME MMDS,
+    status: ACTIVATED,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: 1000,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 12,
+    balance: 1000,
+    profitShareRatio: 0.57,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2021-12-08,
+    activationDate: 2020-12-09,
+    closingDate: null
+}. PASS
+10:32:17:788 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 029> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, accountName, OutRecurringDepositAccountName, NULL] PASS
+10:32:17:788 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 029> RestApiGroupRequestResponseValidate::	Comparison of "Sabbir Khan" to "Sabbir Khan" with operator EQ PASS
+10:32:17:788 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 029> RestApiGroupRequestResponseValidate::	Recurring Deposit Account Name Sabbir Khan. PASS
+10:32:18:300 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 030> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, productCode, OutRecurringDepositProductCode, NULL] PASS
+10:32:18:300 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 030> RestApiGroupRequestResponseValidate::	Comparison of "221" to "221" with operator EQ PASS
+10:32:18:300 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 030> RestApiGroupRequestResponseValidate::	Recurring Deposit Product Code 221. PASS
+10:32:18:810 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 031> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, customerId, OutRecurringDepositCustomerId, NULL] PASS
+10:32:18:810 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 031> RestApiGroupRequestResponseValidate::	Comparison of "7802" to "7802" with operator EQ PASS
+10:32:18:810 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 031> RestApiGroupRequestResponseValidate::	Recurring Deposit Customer Id 7802. PASS
+10:32:19:311 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 032> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, activationDate, OutRecurringDepositActivationDate, NULL] PASS
+10:32:19:311 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 032> RestApiGroupRequestResponseValidate::	Comparison of "2020-12-09" to "2020-12-09" with operator EQ PASS
+10:32:19:311 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 032> RestApiGroupRequestResponseValidate::	Recurring Deposit Activation Date 2020-12-09. PASS
+10:32:19:824 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 033> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, branchCode, OutRecurringDepositBranchCode, NULL] PASS
+10:32:19:824 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 033> RestApiGroupRequestResponseValidate::	Comparison of "0003" to "0003" with operator EQ PASS
+10:32:19:824 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 033> RestApiGroupRequestResponseValidate::	Recurring Deposit Branch Code 0003. PASS
+10:32:20:336 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 034> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, instalmentAmount, OutRecurringDepositInstalmentAmount, NULL] PASS
+10:32:20:336 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 034> RestApiGroupRequestResponseValidate::	Comparison of "1000" to "1000" with operator EQ PASS
+10:32:20:336 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 034> RestApiGroupRequestResponseValidate::	Recurring Deposit Instalment Amount 1000. PASS
+10:32:20:846 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 035> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, currencyCode, OutRecurringDepositCurrencyCode, NULL] PASS
+10:32:20:846 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 035> RestApiGroupRequestResponseValidate::	Comparison of "BDT" to "BDT" with operator EQ PASS
+10:32:20:846 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 035> RestApiGroupRequestResponseValidate::	Recurring Deposit Currency Code BDT. PASS
+10:32:21:354 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 036> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, tenorType, OutRecurringDepositTenorType, NULL] PASS
+10:32:21:354 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 036> RestApiGroupRequestResponseValidate::	Comparison of "MONTHS" to "MONTHS" with operator EQ PASS
+10:32:21:354 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 036> RestApiGroupRequestResponseValidate::	Recurring Deposit Currency Code MONTHS. PASS
+10:32:21:866 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 037> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, tenor, OutRecurringDepositTenor, NULL] PASS
+10:32:21:866 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 037> RestApiGroupRequestResponseValidate::	Comparison of "12" to "12" with operator EQ PASS
+10:32:21:866 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 037> RestApiGroupRequestResponseValidate::	Recurring Deposit Currency Code 12. PASS
+10:32:21:867 ROIFLAG: RestApiRequestObjectDefine               :	<RESTAPIRequestDataSetVerify Row 039> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:32:21:867 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 039> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:32:21:867 ROIFLAG: RestApiRequestUrlPathSet                 :	<RESTAPIRequestDataSetVerify Row 039> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+10:32:21:868 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/fixed-deposit-accounts, 3030, NULL] PASS
+10:32:21:869 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:21:869 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {requestId:FIX2021121900000005,referenceNumber:FIX2021121900000005,id:0,name:\"Md. Moshiur Rahman\",customerId:7802,branchId:3,productCode:211,openingDate:\"2020-07-06\",contactInformation:{mobileNumber:\"01551245665\"},contactAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},introducerAccountNumber:\"0990111000032\",otherSystemAccount:false,accountOpeningChannelId:2,currencyCode:\"BDT\",accountClassId:2,minorAccount:false,ccep:false,indicativeRate:0,linkAccountNumber:\"0990111000065\",linkAccountType:\"CASA\",fundingAccountNumber:\"0990111000065\",fundingAccountType:\"CASA\",tenorType:\"MONTHS\",tenor:24,initialDeposit:500,autoRenewAllowed:false,autoCloseAllowed:false,nominee:{nominees:[{id:0,individualId:11998,sharePercentage:100,guardianId:0,nomineeRelationName:\"Mother\",minor:false}]}}, ACT:NULL] PASS
+10:32:23:354 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:32:23:354 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:23:354 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:23:355 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 040> RestApiGroupRequestResponseValidate::	POST request for Fixed Deposit Account Create PASS
+10:32:23:870 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 041> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList3:PRETTYFORMAT, NULL] PASS
+10:32:23:873 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 041> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    requestId: FIX2021121900000005,
+    referenceNumber: FIX2021121900000005,
+    accountNumber: 0003211004779
+}.NULL, Fixed_Deposit_Account_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:23:873 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 041> RestApiGroupRequestResponseValidate::	All json body {
+    requestId: FIX2021121900000005,
+    referenceNumber: FIX2021121900000005,
+    accountNumber: 0003211004779
+}. PASS
+10:32:24:380 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 042> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, accountNumber, OutFixedDepositAccountNumber, NULL] PASS
+10:32:24:380 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 042> RestApiGroupRequestResponseValidate::	Fixed Deposit Account Number 0003211004779. PASS
+10:32:24:381 ROIFLAG: RestApiRequestObjectDefine               :	<RESTAPIRequestDataSetVerify Row 044> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+10:32:24:381 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 044> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+10:32:24:381 ROIFLAG: RestApiRequestUrlPathSet                 :	<RESTAPIRequestDataSetVerify Row 044> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL, NULL, NULL, NULL] PASS
+10:32:24:382 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 045> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/fixed-deposit-accounts/0003211004779, 3030, NULL] PASS
+10:32:24:383 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 045> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 62092e7c-7663-47b1-888d-bb421f2a37b4|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:24:533 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 045> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+10:32:24:533 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 045> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:24:533 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 045> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:24:533 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 045> RestApiGroupRequestResponseValidate::	GET request for Fixed Deposit Account details PASS
+10:32:25:042 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 046> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutFixedDepositAccountDetails:PRETTYFORMAT, NULL] PASS
+10:32:25:043 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 046> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [Fixed Deposit account details {
+    number: 0003211004779,
+    accountName: Md. Moshiur Rahman,
+    customerId: 7802,
+    type: FIXED_DEPOSIT,
+    productCode: 211,
+    productName: MUDARABA TERM DEPOSIT RECEIPT ,
+    status: INACTIVE,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: null,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 24,
+    balance: 500,
+    profitShareRatio: 0.56,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2022-07-05,
+    activationDate: 2020-07-06,
+    closingDate: null,
+    dueInstallment: null,
+    totalInstallment: null,
+    advanceInstallment: null,
+    givenInstallment: null
+}.NULL, Fixed_Deposit_Account_Details.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:25:043 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 046> RestApiGroupRequestResponseValidate::	Fixed Deposit account details {
+    number: 0003211004779,
+    accountName: Md. Moshiur Rahman,
+    customerId: 7802,
+    type: FIXED_DEPOSIT,
+    productCode: 211,
+    productName: MUDARABA TERM DEPOSIT RECEIPT ,
+    status: INACTIVE,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: null,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 24,
+    balance: 500,
+    profitShareRatio: 0.56,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2022-07-05,
+    activationDate: 2020-07-06,
+    closingDate: null,
+    dueInstallment: null,
+    totalInstallment: null,
+    advanceInstallment: null,
+    givenInstallment: null
+}. PASS
+10:32:25:555 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 047> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, accountName, OutFixedDepositAccountName, NULL] PASS
+10:32:25:556 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 047> RestApiGroupRequestResponseValidate::	Comparison of "Md. Moshiur Rahman" to "Md. Moshiur Rahman" with operator EQ PASS
+10:32:25:556 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 047> RestApiGroupRequestResponseValidate::	Fixed Deposit account name Md. Moshiur Rahman. PASS
+10:32:26:058 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 048> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, productCode, OutFixedDepositProductCode, NULL] PASS
+10:32:26:058 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 048> RestApiGroupRequestResponseValidate::	Comparison of "211" to "211" with operator EQ PASS
+10:32:26:058 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 048> RestApiGroupRequestResponseValidate::	Fixed Deposit product code 211. PASS
+10:32:26:572 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 049> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, customerId, OutFixedDepositCustomerId, NULL] PASS
+10:32:26:572 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 049> RestApiGroupRequestResponseValidate::	Comparison of "7802" to "7802" with operator EQ PASS
+10:32:26:572 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 049> RestApiGroupRequestResponseValidate::	Fixed Deposit customer id 7802. PASS
+10:32:27:083 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 050> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, activationDate, OutFixedDepositActivationDate, NULL] PASS
+10:32:27:083 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 050> RestApiGroupRequestResponseValidate::	Comparison of "2020-07-06" to "2020-07-06" with operator EQ PASS
+10:32:27:083 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 050> RestApiGroupRequestResponseValidate::	Fixed Deposit Activation Date 2020-07-06. PASS
+10:32:27:592 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 051> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, branchCode, OutFixedDepositBranchCode, NULL] PASS
+10:32:27:592 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 051> RestApiGroupRequestResponseValidate::	Comparison of "0003" to "0003" with operator EQ PASS
+10:32:27:592 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 051> RestApiGroupRequestResponseValidate::	Fixed Deposit Branch Code 0003. PASS
+10:32:28:102 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 052> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, currencyCode, OutFixedDepositCurrencyCode, NULL] PASS
+10:32:28:102 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 052> RestApiGroupRequestResponseValidate::	Comparison of "BDT" to "BDT" with operator EQ PASS
+10:32:28:102 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 052> RestApiGroupRequestResponseValidate::	Fixed Deposit Currency Code BDT. PASS
+10:32:28:615 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 053> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, tenorType, OutFixedDepositTenorType, NULL] PASS
+10:32:28:615 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 053> RestApiGroupRequestResponseValidate::	Comparison of "MONTHS" to "MONTHS" with operator EQ PASS
+10:32:28:615 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 053> RestApiGroupRequestResponseValidate::	Fixed Deposit Tenor Type MONTHS. PASS
+10:32:29:123 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 054> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, tenor, OutFixedDepositTenor, NULL] PASS
+10:32:29:123 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 054> RestApiGroupRequestResponseValidate::	Comparison of "24" to "24" with operator EQ PASS
+10:32:29:123 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 054> RestApiGroupRequestResponseValidate::	Fixed Deposit Tenor Type 24. PASS
+10:32:29:123 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 054> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+10:32:29:124 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Account Inquiry",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+10:32:29:124 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Account Inquiry, PASS, Account_Create_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+10:32:29:125 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Account Inquiry PASS.
+10:32:29:125 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:32:29:126 AM                                        |
+|			Test Run Duration          :	00:00:21:635                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

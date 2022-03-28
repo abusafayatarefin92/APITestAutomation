@@ -1,0 +1,82 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Thursday, December 09, 2021                            |
+|			Test Run Start Time        :	11:19:52:701 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Fund Transfer & Account Inquiry
+
+Test Step 1: ROIFLAGPOST: RestApiRequestObjectDefi:	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseObjectDef:	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-account-inquiry, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 0ea9b7f7-8c9c-447e-b08f-973241fd0cf5|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0606131000019,referenceNumber:INQ2021120900000001,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:INQ2021120900000001}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Account Inquiry PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, availableBalance, OutAvailableBalanceInquiry, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "103011.04" to "NULL" with operator NE PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Available Balance comparing with 103011.04 For The POST request. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, actualBalance, OutActualBalanceInquiry, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "110957.04" to "NULL" with operator NE PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Actual Balance comparing with 110957.04  For The POST request. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/fund-transfer, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 0ea9b7f7-8c9c-447e-b08f-973241fd0cf5|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {referenceNumber:FND2021120900000001,charges:[{chargeAccountNumber:G0003BDT316010001,chargeAmount:0,chargeName:\"Fund Transfer Charge\",currency:BDT,vatAccountNumber:G0003BDT102020004,vatAmount:0}],requestDateTime:\"2021-09-29T08:10:56Z\",requestId:FND2021120900000001,narration:\"FUND TRANSFER FROM A/C 0801111002804 TO A/C 104400000 BY WEB\",currencyCode:BDT,amount:10.0,fromAccountNumber:0606131000019,toAccountNumber:G0003BDT104400000}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Fund Transfer PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {
+    requestId: FND2021120900000001,
+    referenceNumber: FND2021120900000001,
+    availableBalance: 103001.04,
+    actualBalance: 110947.04,
+    responseDateTime: 2021-12-09T11:20:23.47,
+    voucherNumber: 220201396441
+}.NULL, Fund_Transfer.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {
+    requestId: FND2021120900000001,
+    referenceNumber: FND2021120900000001,
+    availableBalance: 103001.04,
+    actualBalance: 110947.04,
+    responseDateTime: 2021-12-09T11:20:23.47,
+    voucherNumber: 220201396441
+}. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, availableBalance, OutAvailableBalanceFund, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "103001.04" to "null" with operator NE PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Available Balance 103001.04 For The POST request. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, actualBalance, OutActualBalanceFund, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "110947.04" to "null" with operator NE PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Actual Balance 110947.04 For The POST request. PASS
+Test Step 1: ROIFLAG: RestApiResponseObjectDefine :	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAG: UtlMathExpressionCompute    :	The Method Return Code with parameter list [103011.04-10.0, OutDiffAvailableBalance, NULL] PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [103011.04-10.0, OutDiffAvailableBalance, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "103001.04" to "103001.04" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Calculated value 103001.04 & available balance 103001.04. PASS
+Test Step 1: ROIFLAG: UtlMathExpressionCompute    :	The Method Return Code with parameter list [110957.04-10.0, OutDiffActualBalance, NULL] PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [110957.04-10.0, OutDiffActualBalance, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "110947.04" to "110947.04" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Calculated value 110947.04 & available balance 103001.04. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL]	Return Code --> PASS.
+Test Step 1: REST API Testing for Fund Transfer & Account Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	11:19:58:223 AM                                        |
+|			Test Run Duration          :	00:00:05:522                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

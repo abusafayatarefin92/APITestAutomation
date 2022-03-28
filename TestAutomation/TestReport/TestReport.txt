@@ -1,0 +1,46 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, December 08, 2021                           |
+|			Test Run Start Time        :	08:22:57:862 PM                                        |
+|			Test Name                  :	Ababil API Testcases                                   |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Ababil NG API Testing                                  |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Selenium (Web Driver)                                  |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Fund Transfer
+
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutAllHeaders, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	ALL headers are Access-Control-Allow-Credentials: true | Access-Control-Allow-Headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,verifier | Access-Control-Allow-Methods: HEAD, PUT, PATCH, TRACE, POST, GET, OPTIONS, DELETE | Access-Control-Allow-Origin: * | Access-Control-Max-Age: 3600 | Content-Encoding: gzip | Content-Type: application/json;charset=UTF-8 | Date: Wed, 08 Dec 2021 14:23:28 GMT | F-Token: 3692f125-8b73-4eeb-ac87-d5e42a7adcae | Vary: Accept-Encoding | Content-Length: 143. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, F-Token, OutFToken, NULL] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	Extract F Token For The POST request. PASS
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Access Token For The POST request. PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestUrlPathSet:	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-customer/api/customers/individuals, 3030, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestHeaderNode:	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer d17a2cc5-b0c1-452a-9bf3-9b600942bac8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestJsonString:	The Method Return Code with parameter list [PostRequestObj, {customerBranch:3,customerClassId:2,individual:{ageClassification:SENIOR,birthCountryId:19,birthPlaceId:210,classificationId:3,contactInformation:{countryCode:88,email:sample@mail.com,mobileNumber:\"01515213836\"},dateOfBirth:\"1997-11-01\",documents:[{documentTypeId:4,properties:[{documentPropertyTypeId:9,propertyValue:8723658977}],verificationDetails:ok,verified:true}],fathersFirstName:Kabir,fathersLastName:Khan,firstName:Sabbir,gender:MALE,lastName:Khan,mailingAddress:PRESENT_ADDRESS,maritalStatus:UNMARRIED,monthlyIncome:50000,mothersFirstName:Shirin,mothersLastName:Khan,nationality:Bangladeshi,permanentAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},presentAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},professionalAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},religionId:1,residenceStatus:RESIDENT,sourceOfFunds:[{description:Salary,sourceId:1}]},referenceNumber:CIS2021100600000001,requestId:CIS2021100600000001,sectorCode:915002}, ACT:NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiRequestSend      :	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+Test Step 1: ROIFLAGPOST: RestApiResponseJsonPathB:	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+Test Step 1: UtlDataValueCompare::	Comparison of "500" to "200" with operator EQ FAIL.
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	<RESTAPIRequestDataSetVerify Row 010> :	Comparison of "500" to "200" with operator EQ FAIL
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Demand Deposit Account Statement FAIL
+Test Step 1: ROIFLAG: RestApiResponseJsonPathBodyN:	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList, NULL] PASS
+Test Step 1: ROIFLAG: TextOutputLineWrite         :	The Method Return Code with parameter list [All json body {code:0300300001,errorReference:null,errorType:EXCEPTION,module:030,debugMessage:null,message:DUPLICATE REQUEST FOUND.,previousCodes:null,errors:null,status:INTERNAL_SERVER_ERROR,timestamp:08-12-2021 20:23:29}.NULL, Response.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {code:0300300001,errorReference:null,errorType:EXCEPTION,module:030,debugMessage:null,message:DUPLICATE REQUEST FOUND.,previousCodes:null,errors:null,status:INTERNAL_SERVER_ERROR,timestamp:08-12-2021 20:23:29}. PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	Return Code --> FAIL.
+Test Exit:	End Of Test. Overall status FAIL.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	FAIL                                                   |
+|			Test Run End Time          :	08:23:03:987 PM                                        |
+|			Test Run Duration          :	00:00:06:125                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

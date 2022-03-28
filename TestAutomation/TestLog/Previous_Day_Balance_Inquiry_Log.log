@@ -1,0 +1,48 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, October 27, 2021                            |
+|			Test Run Start Time        :	12:29:19 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+12:29:19:843 Test Step: Test Step 1
+12:29:19:843 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+12:29:19:843 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+12:29:19:845 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+12:29:19:849 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+12:29:19:849 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+12:29:19:897 Test Step: REST API Requests For Previous Day Balknace Inquiry
+12:29:19:902 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+12:29:19:902 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+12:29:19:902 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-account-previous-balance-inquiry, 3030, NULL] PASS
+12:29:19:904 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer a4a8ef04-521e-466e-a9d7-2deadb791e92|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+12:29:19:905 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0801111002016,balanceDate:\"2021-08-06\"}, ACT:NULL] PASS
+12:29:20:788 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+12:29:20:789 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+12:29:20:789 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+12:29:20:789 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	GET request for Previous Day Balance Inquiry PASS
+12:29:21:292 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList, NULL] PASS
+12:29:21:294 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {"balanceDate":"2021-08-06","balance":154443,"accountNumber":"0801111002016"}. PASS
+12:29:21:294 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+12:29:21:295 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Previous Day Inquiry",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+12:29:21:296 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Previous Day Inquiry, PASS, Previous_Day_Balance_Inquiry_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+12:29:21:296 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Previous Day Inquiry PASS.
+12:29:21:297 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	12:29:21 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

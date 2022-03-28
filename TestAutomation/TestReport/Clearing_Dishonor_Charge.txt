@@ -1,0 +1,12 @@
+All json body {"code":"0190011","errorReference":null,"errorType":"EXCEPTION","module":"020","debugMessage":null,"message":"Transaction not allowed on parent type GL 204000000 
+Exception log no :939177
+","previousCodes":null,"errors":null,"status":"INTERNAL_SERVER_ERROR","timestamp":"18-10-2021 11:04:48"}.
+All json body {"responseDateTime":"2021-10-18T11:09:45.446","referenceNumber":"CDH2021101700000001","requestId":"RequestIdDishonor","actualBalance":5190560.76,"voucherNumber":"220102393942","availableBalance":4931858}.
+All json body {"responseDateTime":"2021-10-18T11:14:59.82","referenceNumber":"CDH2021101700000002","requestId":"RequestIdDishonor","actualBalance":5190515.76,"voucherNumber":"220102393945","availableBalance":4931813}.
+All json body {"responseDateTime":"2021-10-18T11:17:34.872","referenceNumber":"CDH2021101700000004","requestId":"RequestIdDishonor","actualBalance":5190485.76,"voucherNumber":"220102393946","availableBalance":4931783}.
+All json body {"responseDateTime":"2021-10-18T11:24:54.016","referenceNumber":"CDH2021101700000005","requestId":"RequestIdDishonor","actualBalance":5190405.76,"voucherNumber":"220102393950","availableBalance":4931703}.
+All json body {"responseDateTime":"2021-10-25T14:10:33.087","referenceNumber":"CDH2021102500000005","requestId":"RequestIdDishonor","actualBalance":5190325.76,"voucherNumber":"220102394248","availableBalance":4931623}.
+All json body {"responseDateTime":"2021-10-25T14:12:14.768","referenceNumber":"CDH2021102500000006","requestId":"RequestIdDishonor","actualBalance":5190245.76,"voucherNumber":"220102394252","availableBalance":4931493}.
+All json body {"code":"0300300001","errorReference":null,"errorType":"EXCEPTION","module":"030","debugMessage":null,"message":"DUPLICATE REQUEST FOUND.","previousCodes":null,"errors":null,"status":"INTERNAL_SERVER_ERROR","timestamp":"25-10-2021 14:20:21"}.
+All json body {"responseDateTime":"2021-10-25T14:27:06.794","referenceNumber":"CDH2021102500000007","requestId":"RequestIdDishonor","actualBalance":5190165.76,"voucherNumber":"220102394258","availableBalance":4931413}.
+All json body {"responseDateTime":"2021-10-25T18:18:51.73","referenceNumber":"CDH2021102500000008","requestId":"RequestIdDishonor","actualBalance":5190085.76,"voucherNumber":"220102394314","availableBalance":4931333}.

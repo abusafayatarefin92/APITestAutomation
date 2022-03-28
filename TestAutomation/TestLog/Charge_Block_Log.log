@@ -1,0 +1,61 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, November 09, 2021                             |
+|			Test Run Start Time        :	10:32:39:784 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+10:32:39:785 Test Step: Test Step 1
+10:32:39:785 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+10:32:39:785 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+10:32:39:786 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+10:32:39:789 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+10:32:39:789 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+10:32:39:834 Test Step: REST API Requests For Charge Block
+10:32:39:838 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:32:39:838 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:32:39:839 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/block-amount, 3030, NULL] PASS
+10:32:39:841 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 0e45c5f3-4bf2-4f56-bfa1-d3451d3fb0c5|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:32:39:842 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountNumber:\"0801111002016\",blockPurpose:CLEARING_CHARGE_TXN,creditAccounts:[{accountBranch:3,accountCurrency:BDT,accountNumber:\"31601000\",accountType:GL,amount:19,narration:Dishonor,partialCreditAllowed:false,transactionCurrency:BDT}],debitNarration:Dishonor Charge,partialReleaseAllowed:false,referenceNumber:BLK2021110900000001,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:BLK2021110900000001}, ACT:NULL] PASS
+10:32:40:725 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:32:40:727 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:40:728 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:40:729 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Charge Block PASS
+10:32:41:276 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+10:32:41:280 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    "requestId": "BLK2021110900000001",
+    "referenceNumber": "BLK2021110900000001",
+    "responseDateTime": "2021-11-09T10:33:06.411",
+    "availableBalance": -57.0,
+    "actualBalance": 25550.5,
+    "blockReferenceNo": "18151ecb-d802-4154-b501-2ac8213acd10"
+}.NULL, Charge_Block.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:41:280 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {
+    "requestId": "BLK2021110900000001",
+    "referenceNumber": "BLK2021110900000001",
+    "responseDateTime": "2021-11-09T10:33:06.411",
+    "availableBalance": -57.0,
+    "actualBalance": 25550.5,
+    "blockReferenceNo": "18151ecb-d802-4154-b501-2ac8213acd10"
+}. PASS
+10:32:41:280 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+10:32:41:283 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Charge Block",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+10:32:41:283 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Charge Block, PASS, Charge_Block_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+10:32:41:284 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Charge Block PASS.
+10:32:41:286 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:32:41:287 AM                                        |
+|			Test Run Duration          :	00:00:01:503                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

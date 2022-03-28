@@ -1,0 +1,8 @@
+All json body {
+    requestId: FND2021120900000001,
+    referenceNumber: FND2021120900000001,
+    availableBalance: 103001.04,
+    actualBalance: 110947.04,
+    responseDateTime: 2021-12-09T11:20:23.47,
+    voucherNumber: 220201396441
+}.

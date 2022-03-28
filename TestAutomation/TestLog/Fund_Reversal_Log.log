@@ -1,0 +1,117 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Thursday, December 09, 2021                            |
+|			Test Run Start Time        :	11:19:52:701 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+11:19:52:724 Test Step: Test Step 1
+11:19:52:724 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestContinue::	NULL.
+11:19:52:724 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestContinue::	[NULL].
+11:19:52:725 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestContinue::	Return Code --> PASS.
+11:19:52:726 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+11:19:52:726 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+11:19:52:798 Test Step: REST API Requests For Fund Transfer & Account Inquiry
+11:19:52:801 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+11:19:52:801 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+11:19:52:801 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/tfs-account-inquiry, 3030, NULL] PASS
+11:19:52:804 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 0ea9b7f7-8c9c-447e-b08f-973241fd0cf5|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+11:19:52:804 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {accountNumber:0606131000019,referenceNumber:INQ2021120900000001,requestDateTime:\"2021-09-29T08:10:56Z\",requestId:INQ2021120900000001}, ACT:NULL] PASS
+11:19:53:992 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+11:19:53:992 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+11:19:53:992 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+11:19:53:992 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Account Inquiry PASS
+11:19:54:503 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutListInquiry1:PRETTYFORMAT, NULL] PASS
+11:19:54:503 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {
+    requestId: INQ2021120900000001,
+    referenceNumber: INQ2021120900000001,
+    availableBalance: 103011.04,
+    actualBalance: 110957.04,
+    responseDateTime: 2021-12-09T11:20:20.808,
+    voucherNumber: null,
+    accountName: GENIUS SOMAJ KOLLAN FOUNDATION (GSKF),
+    accountNumber: 0606131000019,
+    currencyCode: BDT,
+    productCode: 131,
+    accountStatus: ACTIVATED,
+    accountType: DEMAND_DEPOSIT,
+    branchId: 606,
+    customerId: 1514,
+    conatactNumber: 01714548146,
+    addressLineOne: HEAD OFFICE:MALGRAM SOUTH PARA BOGRA SADER, BOGRA,
+    addressLineTwo: null,
+    countryName: Bangladesh,
+    divisionName: null,
+    districtName: BOGRA,
+    upazilaName: null,
+    postalCode: null
+}. PASS
+11:19:55:006 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, availableBalance, OutAvailableBalanceInquiry, NULL] PASS
+11:19:55:006 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Comparison of "103011.04" to "NULL" with operator NE PASS
+11:19:55:006 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Available Balance comparing with 103011.04 For The POST request. PASS
+11:19:55:517 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, actualBalance, OutActualBalanceInquiry, NULL] PASS
+11:19:55:517 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Comparison of "110957.04" to "NULL" with operator NE PASS
+11:19:55:517 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Actual Balance comparing with 110957.04  For The POST request. PASS
+11:19:55:518 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+11:19:55:518 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+11:19:55:518 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+11:19:55:520 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api-transaction/fund-transfer, 3030, NULL] PASS
+11:19:55:521 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 0ea9b7f7-8c9c-447e-b08f-973241fd0cf5|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+11:19:55:521 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {referenceNumber:FND2021120900000001,charges:[{chargeAccountNumber:G0003BDT316010001,chargeAmount:0,chargeName:\"Fund Transfer Charge\",currency:BDT,vatAccountNumber:G0003BDT102020004,vatAmount:0}],requestDateTime:\"2021-09-29T08:10:56Z\",requestId:FND2021120900000001,narration:\"FUND TRANSFER FROM A/C 0801111002804 TO A/C 104400000 BY WEB\",currencyCode:BDT,amount:10.0,fromAccountNumber:0606131000019,toAccountNumber:G0003BDT104400000}, ACT:NULL] PASS
+11:19:56:679 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+11:19:56:679 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+11:19:56:679 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+11:19:56:679 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	POST request for Fund Transfer PASS
+11:19:57:191 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+11:19:57:194 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    requestId: FND2021120900000001,
+    referenceNumber: FND2021120900000001,
+    availableBalance: 103001.04,
+    actualBalance: 110947.04,
+    responseDateTime: 2021-12-09T11:20:23.47,
+    voucherNumber: 220201396441
+}.NULL, Fund_Transfer.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+11:19:57:194 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	All json body {
+    requestId: FND2021120900000001,
+    referenceNumber: FND2021120900000001,
+    availableBalance: 103001.04,
+    actualBalance: 110947.04,
+    responseDateTime: 2021-12-09T11:20:23.47,
+    voucherNumber: 220201396441
+}. PASS
+11:19:57:696 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, availableBalance, OutAvailableBalanceFund, NULL] PASS
+11:19:57:696 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	Comparison of "103001.04" to "null" with operator NE PASS
+11:19:57:696 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	Available Balance 103001.04 For The POST request. PASS
+11:19:58:208 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, actualBalance, OutActualBalanceFund, NULL] PASS
+11:19:58:208 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	Comparison of "110947.04" to "null" with operator NE PASS
+11:19:58:208 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	Actual Balance 110947.04 For The POST request. PASS
+11:19:58:209 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+11:19:58:218 ROIFLAG: UtlMathExpressionCompute                 :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [103011.04-10.0, OutDiffAvailableBalance, NULL] PASS
+11:19:58:219 ROIFLAG: FrmSubMultipleMathExpressionExecute      :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [103011.04-10.0, OutDiffAvailableBalance, NULL] PASS
+11:19:58:219 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	Comparison of "103001.04" to "103001.04" with operator EQ PASS
+11:19:58:219 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 019> RestApiGroupRequestResponseValidate::	Calculated value 103001.04 & available balance 103001.04. PASS
+11:19:58:220 ROIFLAG: UtlMathExpressionCompute                 :	<RESTAPIRequestDataSetVerify Row 020> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [110957.04-10.0, OutDiffActualBalance, NULL] PASS
+11:19:58:220 ROIFLAG: FrmSubMultipleMathExpressionExecute      :	<RESTAPIRequestDataSetVerify Row 020> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [110957.04-10.0, OutDiffActualBalance, NULL] PASS
+11:19:58:220 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 020> RestApiGroupRequestResponseValidate::	Comparison of "110947.04" to "110947.04" with operator EQ PASS
+11:19:58:220 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 020> RestApiGroupRequestResponseValidate::	Calculated value 110947.04 & available balance 103001.04. PASS
+11:19:58:220 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 020> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+11:19:58:221 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Fund Transfer & Account Inquiry",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+11:19:58:221 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Fund Transfer & Account Inquiry, PASS, Fund_Reversal_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+11:19:58:222 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Fund Transfer & Account Inquiry PASS.
+11:19:58:222 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	11:19:58:223 AM                                        |
+|			Test Run Duration          :	00:00:05:522                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

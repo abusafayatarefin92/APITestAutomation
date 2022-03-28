@@ -1,0 +1,57 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Thursday, November 25, 2021                            |
+|			Test Run Start Time        :	01:24:23:333 PM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+13:24:23:334 Test Step: Test Step 1
+13:24:23:335 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestContinue::	NULL.
+13:24:23:335 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestContinue::	[NULL].
+13:24:23:336 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestContinue::	Return Code --> PASS.
+13:24:23:338 Call Entry Pre Parse                              :	<TestMain Row 004> UtlDataValueCompare::	$LOOPNUM,EQ,"0",STR,TRUE,NULL.
+13:24:23:338 Call Entry Post Parse                             :	<TestMain Row 004> UtlDataValueCompare::	[0, EQ, 0, STR, TRUE, NULL].
+13:24:23:339 Call Exit                                         :	<TestMain Row 004> UtlDataValueCompare::	Return Code --> PASS.
+13:24:23:340 Call Entry Pre Parse                              :	<TestMain Row 005> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+13:24:23:340 Call Entry Post Parse                             :	<TestMain Row 005> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+13:24:23:395 Test Step: REST API Requests For All Customer Details
+13:24:23:398 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 004> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+13:24:23:408 ROIFLAG: FrmSubMultipleMathExpressionExecute      :	<RESTAPIRequestDataSetVerify Row 004> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [50.00+30+10|50.00*30*10|(50.00-30)-(10-5)-2|(50.00/30)/(10/5)/2, OutSumValue:ROUNDOFF=5|OutProductValue|OutDiffValue|OutDivsionValue:ROUNDOFF=DEFAULT, NULL] PASS
+13:24:23:408 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 004> RestApiGroupRequestResponseValidate::	Comparison of "90.00000" to "90.00000" with operator EQ PASS
+13:24:23:408 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 004> RestApiGroupRequestResponseValidate::	Comparison of "13" to "13" with operator EQ PASS
+13:24:23:409 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 004> RestApiGroupRequestResponseValidate::	Sum = 90.00000, Sub = 13. PASS
+13:24:23:411 ROIFLAG: FrmSubMultipleMathExpressionExecute      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [50.00+30+10|50.00*30*10|(50.00-30)-(10-5)-2|(50.00/30)/(10/5)/2, OutSumValue:ROUNDOFF=5|OutProductValue|OutDiffValue|OutDivsionValue:ROUNDOFF=DEFAULT, NULL] PASS
+13:24:23:411 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "0.42" to "0.42" with operator EQ PASS
+13:24:23:412 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Division = 0.42 PASS
+13:24:23:413 ROIFLAG: FrmSubMultipleMathExpressionExecute      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [50.00+30+10|50.00*30*10|(50.00-30)-(10-5)-2|(50.00/30)/(10/5)/2, OutSumValue:ROUNDOFF=5|OutProductValue|OutDiffValue|OutDivsionValue:ROUNDOFF=DEFAULT, NULL] PASS
+13:24:23:413 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Comparison of "90.00000" to "90.00000" with operator EQ PASS
+13:24:23:414 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Comparison of "15000" to "15000" with operator EQ PASS
+13:24:23:414 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Comparison of "13" to "13" with operator EQ PASS
+13:24:23:414 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Comparison of "0.42" to "0.42" with operator EQ PASS
+13:24:23:414 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Sum = 90.00000, Sub = 13, Multiple = 15000 and Division = 0.42 PASS
+13:24:23:415 ROIFLAG: FrmSubMultipleMathExpressionExecute      :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [50.00+30+10+5, OutSumValue, NULL] PASS
+13:24:23:415 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Comparison of "95" to "95" with operator EQ PASS
+13:24:23:415 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Sum = 95; PASS
+13:24:23:416 ROIFLAG: FrmSubMultipleParamValueSet              :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [sumOfTwo|currentLoopNum, Total is 95|1, NULL] PASS
+13:24:23:416 ROIFLAG: CONFIG                                   :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Total is = Total is 95 and Current Loop = 1 PASS
+13:24:23:416 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+13:24:23:417 Call Entry Pre Parse                              :	<TestMain Row 006> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for All customer Details",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+13:24:23:418 Call Entry Post Parse                             :	<TestMain Row 006> TextOutputLineWrite::	[Test Step 1: REST API Testing for All customer Details, PASS, Test.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+13:24:23:418 Report Message                                    :	<TestMain Row 006> TextOutputLineWrite::	Test Step 1: REST API Testing for All customer Details PASS.
+13:24:23:419 Call Exit                                         :	<TestMain Row 006> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	01:24:23:420 PM                                        |
+|			Test Run Duration          :	00:00:00:87                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

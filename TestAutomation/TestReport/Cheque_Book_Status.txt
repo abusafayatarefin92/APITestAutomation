@@ -1,0 +1,21 @@
+All json body {
+    "content": [
+        {
+            "id": 3090,
+            "accountId": 6886,
+            "issueDateTime": "2021-08-06T11:39:48.502",
+            "chequePrefix": null,
+            "startLeafNumber": "9948261",
+            "endLeafNumber": "9948270",
+            "chequeBookStatus": "ISSUED",
+            "chequeType": "CHEQUE",
+            "usedCount": null,
+            "unusedCount": null,
+            "stoppedCount": null,
+            "destroyedCount": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}.

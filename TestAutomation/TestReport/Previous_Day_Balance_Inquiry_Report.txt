@@ -1,0 +1,32 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, October 27, 2021                            |
+|			Test Run Start Time        :	12:29:19 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Previous Day Balknace Inquiry
+
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	GET request for Previous Day Balance Inquiry PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"balanceDate":"2021-08-06","balance":154443,"accountNumber":"0801111002016"}. PASS
+Test Step 1: REST API Testing for Previous Day Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	12:29:21 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

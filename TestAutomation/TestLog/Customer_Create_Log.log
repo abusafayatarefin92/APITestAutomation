@@ -1,0 +1,97 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Thursday, November 11, 2021                            |
+|			Test Run Start Time        :	09:42:20:348 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+09:42:20:368 Test Step: Test Step 1
+09:42:20:368 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+09:42:20:368 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+09:42:20:369 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+09:42:20:371 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+09:42:20:371 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+09:42:20:431 Test Step: REST API Requests For Customer Create
+09:42:20:435 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+09:42:20:435 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+09:42:20:435 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-customer/api/customers/individuals, 3030, NULL] PASS
+09:42:20:437 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 68a53cd7-d448-4428-9627-70b373631e00|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:42:20:440 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {customerBranch:3,customerClassId:2,individual:{ageClassification:\"SENIOR\",birthCountryId:19,birthPlaceId:210,classificationId:3,contactInformation:{countryCode:88,email:\"sample@mail.com\",mobileNumber:\"01515213836\"},dateOfBirth:\"1997-11-01\",documents:[{documentTypeId:4,properties:[{documentPropertyTypeId:9,propertyValue:8723658977}],verificationDetails:ok,verified:true}],fathersFirstName:Kabir,fathersLastName:Khan,firstName:Sabbir,gender:MALE,lastName:Khan,mailingAddress:PRESENT_ADDRESS,maritalStatus:UNMARRIED,monthlyIncome:50000,mothersFirstName:Shirin,mothersLastName:Khan,nationality:Bangladeshi,permanentAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},presentAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},professionalAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},religionId:1,residenceStatus:RESIDENT,sourceOfFunds:[{description:Salary,sourceId:1}]},referenceNumber:SNG2021111100000001,requestId:SNG2021111100000001,sectorCode:915002}, ACT:NULL] PASS
+09:42:21:473 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+09:42:21:473 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:42:21:474 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:42:21:474 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	POST request for Single customer create PASS
+09:42:21:988 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+09:42:21:990 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [{
+    "requestId": "SNG2021111100000001",
+    "referenceNumber": "SNG2021111100000001",
+    "customerId": 8317
+}.NULL, Single_Customer_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:42:21:990 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	{
+    "requestId": "SNG2021111100000001",
+    "referenceNumber": "SNG2021111100000001",
+    "customerId": 8317
+}. PASS
+09:42:21:991 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+09:42:21:991 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+09:42:21:991 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+09:42:21:993 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-customer/api/customers/joint-customers, 3030, NULL] PASS
+09:42:21:994 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 68a53cd7-d448-4428-9627-70b373631e00|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:42:21:997 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {applicants:[{applicantTypeId:1,individual:{ageClassification:SENIOR,birthCountryId:19,birthPlaceId:210,classificationId:3,contactInformation:{countryCode:88,email:\"sample@mail.com\",mobileNumber:\"01515213836\"},dateOfBirth:\"1997-11-01\",fathersFirstName:Kabir,fathersLastName:Khan,firstName:Sabbir,gender:\"MALE\",lastName:\"Khan\",mailingAddress:\"PRESENT_ADDRESS\",maritalStatus:\"UNMARRIED\",monthlyIncome:50000,mothersFirstName:\"Shirin\",mothersLastName:\"Khan\",nationality:\"Bangladeshi\",permanentAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},presentAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},professionalAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},religionId:1,residenceStatus:\"RESIDENT\",sourceOfFunds:[{description:\"Salary\",sourceId:1}]}},{applicantTypeId:2,individual:{ageClassification:\"SENIOR\",birthCountryId:19,birthPlaceId:210,classificationId:3,contactInformation:{countryCode:\"88\",email:\"sample@mail.com\",mobileNumber:\"01515213836\"},dateOfBirth:\"1997-11-01\",fathersFirstName:\"Sabur\",fathersLastName:\"Khan\",firstName:\"Sakib\",gender:\"MALE\",lastName:\"Khan\",mailingAddress:\"PRESENT_ADDRESS\",maritalStatus:\"UNMARRIED\",monthlyIncome:60000,mothersFirstName:\"Srea\",mothersLastName:\"Khan\",nationality:\"Bangladeshi\",permanentAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},presentAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},professionalAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},religionId:1,residenceStatus:\"RESIDENT\",sourceOfFunds:[{description:\"Salary\",sourceId:1}]}}],customerBranch:3,customerName:Sabbir & Sakib,referenceNumber:JNT2021111100000001,requestId:JNT2021111100000001}, ACT:NULL] PASS
+09:42:22:723 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+09:42:22:723 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:42:22:724 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:42:22:724 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	POST request for Joint customer create PASS
+09:42:23:240 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+09:42:23:242 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [{
+    "requestId": "JNT2021111100000001",
+    "referenceNumber": "JNT2021111100000001",
+    "customerId": 8318
+}.NULL, Joint_Customer_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:42:23:242 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	{
+    "requestId": "JNT2021111100000001",
+    "referenceNumber": "JNT2021111100000001",
+    "customerId": 8318
+}. PASS
+09:42:23:243 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+09:42:23:243 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+09:42:23:243 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL, NULL, NULL, NULL] PASS
+09:42:23:245 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-customer/api/customers/organizations, 3030, NULL] PASS
+09:42:23:245 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 68a53cd7-d448-4428-9627-70b373631e00|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:42:23:248 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {customerBranch:3,customerName:XYZ Co.,organization:{businessAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},businessDetails:{contractualManpower:10,monthlyTurnover:100000,netWorth:1000000,otherInformation:\"ok\",permanentManpower:10,typeOfBusinesses:[{id:2,name:\"Solution\",riskScore:3}],typeOfProductAndService:\"Solution\",yearlyTurnover:1000000},contactInformation:{countryCode:\"88\",email:\"sample@mail.com\",mobileNumber:\"01515213836\"},countryOfOrigin:19,factoryAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},mailingAddress:\"BUSINESS_ADDRESS\",name:XYZ Co.,organizationId:0,organizationTypeId:2,registeredAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},sourceOfFunds:[{description:\"Solutions\",sourceId:2}]},owners:[{individual:{ageClassification:\"SENIOR\",birthCountryId:19,birthPlaceId:210,classificationId:3,contactInformation:{countryCode:\"88\",email:\"sample@mail.com\",mobileNumber:\"01515213836\"},dateOfBirth:\"1997-11-01\",documents:[{documentTypeId:4,properties:[{documentPropertyTypeId:9,propertyValue:8723658977}],verificationDetails:\"ok\",verified:true}],fathersFirstName:\"Kabir\",fathersLastName:\"Khan\",firstName:\"Sabbir\",gender:\"MALE\",individualId:0,lastName:\"Khan\",mailingAddress:\"PRESENT_ADDRESS\",maritalStatus:\"UNMARRIED\",monthlyIncome:50000,mothersFirstName:\"Shirin\",mothersLastName:\"Khan\",nationality:\"Bangladeshi\",permanentAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},presentAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},professionalAddress:{addressLine:\"Dhaka\",addressLineTwo:\"Dhanmondi\",countryCode:\"BD\",district:\"DHK\",division:\"DHK\",postCode:\"1209\",upazilla:\"DHN\"},religionId:1,residenceStatus:\"RESIDENT\",sourceOfFunds:[{description:\"Salary\",sourceId:1}]},ownerId:0,ownerType:\"INDIVIDUAL\",ownerTypeId:9,sharePercentage:100}],referenceNumber:ORG2021111100000001,requestId:ORG2021111100000001}, ACT:NULL] PASS
+09:42:23:681 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+09:42:23:681 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:42:23:682 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:42:23:682 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	POST request for Organization customer create PASS
+09:42:24:198 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList3:PRETTYFORMAT, NULL] PASS
+09:42:24:201 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [{
+    "requestId": "ORG2021111100000001",
+    "referenceNumber": "ORG2021111100000001",
+    "customerId": 8319
+}.NULL, Organization_Customer_Create.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:42:24:201 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	{
+    "requestId": "ORG2021111100000001",
+    "referenceNumber": "ORG2021111100000001",
+    "customerId": 8319
+}. PASS
+09:42:24:201 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+09:42:24:203 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Customer Create",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+09:42:24:203 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Customer Create, PASS, Customer_Create_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+09:42:24:204 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Customer Create PASS.
+09:42:24:204 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	09:42:24:205 AM                                        |
+|			Test Run Duration          :	00:00:03:857                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

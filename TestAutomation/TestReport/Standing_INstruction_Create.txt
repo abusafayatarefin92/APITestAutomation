@@ -1,0 +1,1 @@
+All json body {"referenceNumber":"STI2021092500000003","requestId":"STI2021092500000003","standingInstructionId":235}.

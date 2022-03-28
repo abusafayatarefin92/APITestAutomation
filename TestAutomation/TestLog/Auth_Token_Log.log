@@ -1,0 +1,70 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Sunday, December 19, 2021                              |
+|			Test Run Start Time        :	10:32:03:916 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+10:32:03:918 Test Step: Test Step 1
+10:32:03:919 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+10:32:03:919 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+10:32:03:920 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+10:32:03:922 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+10:32:03:923 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+10:32:04:000 Test Step: REST API Requests For Auth Token
+10:32:04:634 ROIFLAG: RestApiRequestObjectDefine               :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:32:04:634 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:32:04:634 ROIFLAG: RestApiRequestUrlPathSet                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /oauth/token, 3030, NULL] PASS
+10:32:04:699 ROIFLAG: RestApiRequestHeaderNodeSet              :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Content-Type, application/json, STR, ACT:NULL] PASS
+10:32:04:707 ROIFLAG: RestApiRequestJsonStringBodySet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {grant_type:Password,username:apiadmin3,password:123}, ACT:NULL] PASS
+10:32:06:274 ROIFLAG: RestApiRequestSend                       :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+10:32:06:793 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, access_token, OutAccessToken, NULL] PASS
+10:32:06:793 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "62092e7c-7663-47b1-888d-bb421f2a37b4" to "null" with operator NE PASS
+10:32:06:794 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutAllHeaders:PRETTYFORMAT, NULL] PASS
+10:32:06:795 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [ALL headers are `OutAllHeaders`.NULL, Auth_Token_Headers.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:06:795 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	ALL headers are `OutAllHeaders`. PASS
+10:32:07:334 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutAllResponse:PRETTYFORMAT, NULL] PASS
+10:32:07:335 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [Response value {
+    access_token: 62092e7c-7663-47b1-888d-bb421f2a37b4,
+    token_type: bearer,
+    refresh_token: e01d2a7d-5de1-44fd-b614-80ece232289f,
+    expires_in: 3600
+}.NULL, Auth_Token_Response.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:32:07:336 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Response value {
+    access_token: 62092e7c-7663-47b1-888d-bb421f2a37b4,
+    token_type: bearer,
+    refresh_token: e01d2a7d-5de1-44fd-b614-80ece232289f,
+    expires_in: 3600
+}. PASS
+10:32:07:336 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, F-Token, OutFToken, NULL] PASS
+10:32:07:337 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Extract F Token For The POST request. PASS
+10:32:07:337 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:32:07:337 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:32:07:338 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	Access Token For The POST request. PASS
+10:32:07:338 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+10:32:07:339 Call Entry Pre Parse                              :	<TestMain Row 005> UtlParameterValueSet::	[CovAccessToken],CARRYOVERPARAM,OutAccessToken,NULL.
+10:32:07:339 Call Entry Post Parse                             :	<TestMain Row 005> UtlParameterValueSet::	[CovAccessToken, CARRYOVERPARAM, 62092e7c-7663-47b1-888d-bb421f2a37b4, NULL].
+10:32:07:341 Call Exit                                         :	<TestMain Row 005> UtlParameterValueSet::	Return Code --> PASS.
+10:32:07:341 Call Entry Pre Parse                              :	<TestMain Row 006> UtlParameterValueSet::	[CovFToken],CARRYOVERPARAM,OutFToken,NULL.
+10:32:07:342 Call Entry Post Parse                             :	<TestMain Row 006> UtlParameterValueSet::	[CovFToken, CARRYOVERPARAM, 3692f125-8b73-4eeb-ac87-d5e42a7adcae, NULL].
+10:32:07:344 Call Exit                                         :	<TestMain Row 006> UtlParameterValueSet::	Return Code --> PASS.
+10:32:07:345 Call Entry Pre Parse                              :	<TestMain Row 007> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Auth Token",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+10:32:07:346 Call Entry Post Parse                             :	<TestMain Row 007> TextOutputLineWrite::	[Test Step 1: REST API Testing for Auth Token, PASS, Auth_Token_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+10:32:07:347 Report Message                                    :	<TestMain Row 007> TextOutputLineWrite::	Test Step 1: REST API Testing for Auth Token PASS.
+10:32:07:348 Call Exit                                         :	<TestMain Row 007> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:32:07:348 AM                                        |
+|			Test Run Duration          :	00:00:03:432                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

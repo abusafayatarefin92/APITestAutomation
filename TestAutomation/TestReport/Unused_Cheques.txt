@@ -1,0 +1,40 @@
+All json body {
+    "content": [
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948265",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948266",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948270",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}.

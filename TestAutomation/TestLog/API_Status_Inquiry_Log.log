@@ -1,0 +1,60 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, November 09, 2021                             |
+|			Test Run Start Time        :	10:19:57:700 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+10:19:57:702 Test Step: Test Step 1
+10:19:57:702 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+10:19:57:703 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+10:19:57:704 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+10:19:57:706 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+10:19:57:707 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+10:19:57:754 Test Step: REST API Requests For API Status Inquiry
+10:19:57:756 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+10:19:57:757 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+10:19:57:757 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-batch-transaction/api/inquiry/ATM2021021800000001/ATM2021021800000001, 3030, NULL] PASS
+10:19:57:760 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer 24ab9e01-3eaf-4b72-bc66-92799036107e|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+10:19:58:043 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, GET, PostResponseObj, NULL] PASS
+10:19:58:044 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+10:19:58:044 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+10:19:58:044 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	GET request for API Status Inquiry PASS
+10:19:58:582 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+10:19:58:585 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [{
+    "requestId": "ATM2021021800000001",
+    "referenceNumber": "ATM2021021800000001",
+    "availableBalance": 980316.79,
+    "actualBalance": 988401.79,
+    "responseDateTime": "2021-02-18T15:21:55.395",
+    "voucherNumber": "20072176195"
+}.NULL, API_Status_Inquiry.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+10:19:58:585 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	{
+    "requestId": "ATM2021021800000001",
+    "referenceNumber": "ATM2021021800000001",
+    "availableBalance": 980316.79,
+    "actualBalance": 988401.79,
+    "responseDateTime": "2021-02-18T15:21:55.395",
+    "voucherNumber": "20072176195"
+}. PASS
+10:19:58:585 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+10:19:58:587 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for API Status Inquiry",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+10:19:58:587 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for API Status Inquiry, PASS, API_Status_Inquiry_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+10:19:58:589 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for API Status Inquiry PASS.
+10:19:58:590 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	10:19:58:594 AM                                        |
+|			Test Run Duration          :	00:00:00:894                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

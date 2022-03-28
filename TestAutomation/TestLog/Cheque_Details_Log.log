@@ -1,0 +1,228 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, November 10, 2021                           |
+|			Test Run Start Time        :	09:35:07:014 AM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Rest assured                                           |
+|			Test Tool Version          :	4.3.3                                                  |
+|__________________________________________________________________________________________________|
+
+
+09:35:07:016 Test Step: Test Step 1
+09:35:07:016 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+09:35:07:016 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+09:35:07:020 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+09:35:07:023 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+09:35:07:023 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+09:35:07:100 Test Step: REST API Requests For Cheque Details
+09:35:07:104 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+09:35:07:104 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+09:35:07:105 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/1781670000006/cheque/9948264, 3030, NULL] PASS
+09:35:07:107 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:35:07:517 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+09:35:07:518 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:35:07:518 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:35:07:519 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	GET request for Cheque Leaf Status PASS
+09:35:08:028 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList:PRETTYFORMAT, NULL] PASS
+09:35:08:031 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    "accountNumber": "1781670000006",
+    "chequeNumber": "9948264",
+    "chequePrefix": null,
+    "chequeStatus": "STOPPED",
+    "bookId": 3090,
+    "globalTxnNo": 0,
+    "issueDate": null,
+    "amount": null,
+    "transactionParticulars": null
+}.NULL, Cheque_Leaf_Status.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:35:08:031 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	All json body {
+    "accountNumber": "1781670000006",
+    "chequeNumber": "9948264",
+    "chequePrefix": null,
+    "chequeStatus": "STOPPED",
+    "bookId": 3090,
+    "globalTxnNo": 0,
+    "issueDate": null,
+    "amount": null,
+    "transactionParticulars": null
+}. PASS
+09:35:08:032 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+09:35:08:032 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+09:35:08:032 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL, NULL, NULL, NULL] PASS
+09:35:08:033 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/1781670000006/unused-cheques, 3030, NULL] PASS
+09:35:08:036 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:35:08:454 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+09:35:08:454 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:35:08:455 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:35:08:455 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 009> RestApiGroupRequestResponseValidate::	GET request for Unused cheques PASS
+09:35:08:966 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList2:PRETTYFORMAT, NULL] PASS
+09:35:08:969 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    "content": [
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948265",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948266",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948270",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}.NULL, Unused_Cheques.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:35:08:969 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	All json body {
+    "content": [
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948265",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948266",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        },
+        {
+            "accountNumber": "1781670000006",
+            "chequeNumber": "9948270",
+            "chequePrefix": null,
+            "chequeStatus": "UNUSED",
+            "bookId": 3090,
+            "globalTxnNo": 0,
+            "issueDate": null,
+            "amount": null,
+            "transactionParticulars": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}. PASS
+09:35:08:970 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+09:35:08:970 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+09:35:08:970 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 012> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL, NULL, NULL, NULL] PASS
+09:35:08:970 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-accounts/cheques/1781670000006/books, 3030, NULL] PASS
+09:35:08:971 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:35:09:664 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+09:35:09:664 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:35:09:664 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:35:09:665 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 013> RestApiGroupRequestResponseValidate::	GET request for Cheque Book Status PASS
+09:35:10:175 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList3:PRETTYFORMAT, NULL] PASS
+09:35:10:179 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {
+    "content": [
+        {
+            "id": 3090,
+            "accountId": 6886,
+            "issueDateTime": "2021-08-06T11:39:48.502",
+            "chequePrefix": null,
+            "startLeafNumber": "9948261",
+            "endLeafNumber": "9948270",
+            "chequeBookStatus": "ISSUED",
+            "chequeType": "CHEQUE",
+            "usedCount": null,
+            "unusedCount": null,
+            "stoppedCount": null,
+            "destroyedCount": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}.NULL, Cheque_Book_Status.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:35:10:180 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 014> RestApiGroupRequestResponseValidate::	All json body {
+    "content": [
+        {
+            "id": 3090,
+            "accountId": 6886,
+            "issueDateTime": "2021-08-06T11:39:48.502",
+            "chequePrefix": null,
+            "startLeafNumber": "9948261",
+            "endLeafNumber": "9948270",
+            "chequeBookStatus": "ISSUED",
+            "chequeType": "CHEQUE",
+            "usedCount": null,
+            "unusedCount": null,
+            "stoppedCount": null,
+            "destroyedCount": null
+        }
+    ],
+    "pageSize": 20,
+    "pageNumber": 0,
+    "pageCount": 1
+}. PASS
+09:35:10:180 ROIFLAGPOST: RestApiRequestObjectDefine           :	<RESTAPIRequestDataSetVerify Row 016> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL] PASS
+09:35:10:180 ROIFLAGPOST: RestApiResponseObjectDefine          :	<RESTAPIRequestDataSetVerify Row 016> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+09:35:10:180 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 016> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, NULL, NULL, NULL, NULL] PASS
+09:35:10:181 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, http://192.168.1.140, /ababil-deposit/api/demand-deposit-products/cheque-book-size/098, 3030, NULL] PASS
+09:35:10:182 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, Authorization|Content-Type|F-Token, Bearer 9a07602d-caf0-4418-9b76-688a08176fe6|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+09:35:10:402 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetRequestObj, GET, GetResponseObj, NULL] PASS
+09:35:10:402 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+09:35:10:403 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+09:35:10:403 ROIFLAGPOST: GET                                  :	<RESTAPIRequestDataSetVerify Row 017> RestApiGroupRequestResponseValidate::	GET request for Cheque Book Size by Product code PASS
+09:35:10:914 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [GetResponseObj, $ALL, OutList4:PRETTYFORMAT, NULL] PASS
+09:35:10:917 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body [
+    10,
+    20,
+    50
+].NULL, Cheque_Book_Size_Product.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+09:35:10:917 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	All json body [
+    10,
+    20,
+    50
+]. PASS
+09:35:10:917 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 018> RestApiGroupRequestResponseValidate::	Return Code --> PASS.
+09:35:10:919 Call Entry Pre Parse                              :	<TestMain Row 005> TextOutputLineWrite::	"`GblCurrentTestStepTag`: REST API Testing for Cheque Details",GblStepPassFailStatus,GblTestReportFile,NULL,GblTestReportFolderPath,NULL.
+09:35:10:919 Call Entry Post Parse                             :	<TestMain Row 005> TextOutputLineWrite::	[Test Step 1: REST API Testing for Cheque Details, PASS, Cheque_Details_Report.txt, NULL, D:/TestAutomation/TestReport/, NULL].
+09:35:10:920 Report Message                                    :	<TestMain Row 005> TextOutputLineWrite::	Test Step 1: REST API Testing for Cheque Details PASS.
+09:35:10:920 Call Exit                                         :	<TestMain Row 005> TextOutputLineWrite::	Return Code --> PASS.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	09:35:10:921 AM                                        |
+|			Test Run Duration          :	00:00:03:907                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

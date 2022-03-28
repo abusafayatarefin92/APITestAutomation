@@ -1,0 +1,1 @@
+All json body {"responseDateTime":"2021-10-25T18:18:47.296","referenceNumber":"HLD2021102500000004","requestId":"HLD2021102500000004","actualBalance":5190165.76,"holdReferenceNo":"1575","availableBalance":4931363}.

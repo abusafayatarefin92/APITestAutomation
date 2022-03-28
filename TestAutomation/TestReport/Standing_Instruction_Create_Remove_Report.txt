@@ -1,0 +1,36 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Tuesday, October 26, 2021                              |
+|			Test Run Start Time        :	02:33:17 PM                                            |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			AUT Version                :	null                                                   |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Web Browser Name           :	null                                                   |
+|			Web Browser Version        :	null                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For Standing Instruction Create, Remove
+
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Creating Standing Instruction PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"referenceNumber":"STI2021092500000003","requestId":"STI2021092500000003","standingInstructionId":235}. PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	235. PASS
+Test Step 1: ROIFLAGPOST: UtlDataValueCompare     :	Comparison of "200" to "200" with operator EQ PASS
+Test Step 1: ROIFLAGPOST: POST                    :	POST request for Standing Instruction Remove PASS
+Test Step 1: ROIFLAG: EXTRACT                     :	All json body {"referenceNumber":"SIR2021102500000001","requestId":"SIR2021102500000001","standingInstructionId":235,"responseTime":null,"remark":"Standing Instruction removed successfully"}. PASS
+Test Step 1: REST API Testing for Account Inquiry  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	02:33:21 PM                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

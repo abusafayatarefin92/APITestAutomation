@@ -1,0 +1,9 @@
+All json body {
+    "status": "INTERNAL_SERVER_ERROR",
+    "timestamp": "09-11-2021 17:13:11",
+    "code": "0000000",
+    "module": "000",
+    "message": "Index: 0, Size: 0",
+    "debugMessage": null,
+    "errors": null
+}.

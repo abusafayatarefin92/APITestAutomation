@@ -1,0 +1,5 @@
+{
+    "requestId": "SNG2021111100000001",
+    "referenceNumber": "SNG2021111100000001",
+    "customerId": 8317
+}.

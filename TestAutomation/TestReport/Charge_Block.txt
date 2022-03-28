@@ -1,0 +1,8 @@
+All json body {
+    "requestId": "BLK2021110900000001",
+    "referenceNumber": "BLK2021110900000001",
+    "responseDateTime": "2021-11-09T10:33:06.411",
+    "availableBalance": -57.0,
+    "actualBalance": 25550.5,
+    "blockReferenceNo": "18151ecb-d802-4154-b501-2ac8213acd10"
+}.

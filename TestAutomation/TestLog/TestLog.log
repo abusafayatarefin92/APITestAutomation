@@ -1,0 +1,57 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Wednesday, December 08, 2021                           |
+|			Test Run Start Time        :	08:22:57:862 PM                                        |
+|			Test Name                  :	Ababil API Testcases                                   |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Ababil NG API Testing                                  |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Selenium (Web Driver)                                  |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+20:22:57:878 Test Step: Test Step 1
+20:22:57:878 Call Entry Pre Parse                              :	<TestMain Row 003> UtlOnFailTestAbort::	NULL.
+20:22:57:878 Call Entry Post Parse                             :	<TestMain Row 003> UtlOnFailTestAbort::	[NULL].
+20:22:57:878 Call Exit                                         :	<TestMain Row 003> UtlOnFailTestAbort::	Return Code --> PASS.
+20:22:57:894 Call Entry Pre Parse                              :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	RESTAPIRequestDataSetVerify,DEFAULT,DEFAULT,NULL.
+20:22:57:894 Call Entry Post Parse                             :	<TestMain Row 004> RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL].
+20:22:58:144 Test Step: REST API Requests For Fund Transfer
+20:23:00:253 ROIFLAG: RestApiRequestObjectDefine               :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, NULL] PASS
+20:23:00:253 ROIFLAG: RestApiResponseObjectDefine              :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, NULL] PASS
+20:23:00:253 ROIFLAG: RestApiRequestUrlPathSet                 :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /oauth/token, 3030, NULL] PASS
+20:23:00:456 ROIFLAG: RestApiRequestHeaderNodeSet              :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Content-Type, application/json, STR, ACT:NULL] PASS
+20:23:00:472 ROIFLAG: RestApiRequestJsonStringBodySet          :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {grant_type:Password,username:apiadmin3,password:123}, ACT:NULL] PASS
+20:23:02:393 ROIFLAG: RestApiRequestSend                       :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+20:23:02:893 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, access_token, OutAccessToken, NULL] PASS
+20:23:02:893 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 005> RestApiGroupRequestResponseValidate::	Comparison of "d17a2cc5-b0c1-452a-9bf3-9b600942bac8" to "null" with operator NE PASS
+20:23:02:893 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutAllHeaders, NULL] PASS
+20:23:02:893 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 006> RestApiGroupRequestResponseValidate::	ALL headers are Access-Control-Allow-Credentials: true | Access-Control-Allow-Headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,verifier | Access-Control-Allow-Methods: HEAD, PUT, PATCH, TRACE, POST, GET, OPTIONS, DELETE | Access-Control-Allow-Origin: * | Access-Control-Max-Age: 3600 | Content-Encoding: gzip | Content-Type: application/json;charset=UTF-8 | Date: Wed, 08 Dec 2021 14:23:28 GMT | F-Token: 3692f125-8b73-4eeb-ac87-d5e42a7adcae | Vary: Accept-Encoding | Content-Length: 143. PASS
+20:23:02:893 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, F-Token, OutFToken, NULL] PASS
+20:23:02:893 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 007> RestApiGroupRequestResponseValidate::	Extract F Token For The POST request. PASS
+20:23:02:893 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+20:23:02:893 ROIFLAG: UtlDataValueCompare                      :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Comparison of "200" to "200" with operator EQ PASS
+20:23:02:893 ROIFLAG: VERIFY                                   :	<RESTAPIRequestDataSetVerify Row 008> RestApiGroupRequestResponseValidate::	Access Token For The POST request. PASS
+20:23:02:893 ROIFLAGPOST: RestApiRequestUrlPathSet             :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, http://192.168.1.140, /ababil-customer/api/customers/individuals, 3030, NULL] PASS
+20:23:02:909 ROIFLAGPOST: RestApiRequestHeaderNodeSet          :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, Authorization|Content-Type|F-Token, Bearer d17a2cc5-b0c1-452a-9bf3-9b600942bac8|application/json|3692f125-8b73-4eeb-ac87-d5e42a7adcae, STR|STR|STR, ACT:NULL] PASS
+20:23:02:909 ROIFLAGPOST: RestApiRequestJsonStringBodySet      :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, {customerBranch:3,customerClassId:2,individual:{ageClassification:SENIOR,birthCountryId:19,birthPlaceId:210,classificationId:3,contactInformation:{countryCode:88,email:sample@mail.com,mobileNumber:\"01515213836\"},dateOfBirth:\"1997-11-01\",documents:[{documentTypeId:4,properties:[{documentPropertyTypeId:9,propertyValue:8723658977}],verificationDetails:ok,verified:true}],fathersFirstName:Kabir,fathersLastName:Khan,firstName:Sabbir,gender:MALE,lastName:Khan,mailingAddress:PRESENT_ADDRESS,maritalStatus:UNMARRIED,monthlyIncome:50000,mothersFirstName:Shirin,mothersLastName:Khan,nationality:Bangladeshi,permanentAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},presentAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},professionalAddress:{addressLine:Dhaka,addressLineTwo:Dhanmondi,countryCode:BD,district:DHK,division:DHK,postCode:1209,upazilla:DHN},religionId:1,residenceStatus:RESIDENT,sourceOfFunds:[{description:Salary,sourceId:1}]},referenceNumber:CIS2021100600000001,requestId:CIS2021100600000001,sectorCode:915002}, ACT:NULL] PASS
+20:23:03:487 ROIFLAGPOST: RestApiRequestSend                   :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostRequestObj, POST, PostResponseObj, NULL] PASS
+20:23:03:487 ROIFLAGPOST: RestApiResponseJsonPathBodyNodeValueG:	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, STATUSCODE, OutStatusCode, NULL] PASS
+20:23:03:487 ROIFLAGPOST: UtlDataValueCompare                  :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	Comparison of "500" to "200" with operator EQ FAIL
+20:23:03:487 ROIFLAGPOST: POST                                 :	<RESTAPIRequestDataSetVerify Row 010> RestApiGroupRequestResponseValidate::	POST request for Demand Deposit Account Statement FAIL
+20:23:03:987 ROIFLAG: RestApiResponseJsonPathBodyNodeValueGet  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [PostResponseObj, $ALL, OutList, NULL] PASS
+20:23:03:987 ROIFLAG: TextOutputLineWrite                      :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	The Method Return Code with parameter list [All json body {code:0300300001,errorReference:null,errorType:EXCEPTION,module:030,debugMessage:null,message:DUPLICATE REQUEST FOUND.,previousCodes:null,errors:null,status:INTERNAL_SERVER_ERROR,timestamp:08-12-2021 20:23:29}.NULL, Response.txtNULL, D:/TestAutomation/TestReport/REPLACE:TRUE] PASS
+20:23:03:987 ROIFLAG: EXTRACT                                  :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	All json body {code:0300300001,errorReference:null,errorType:EXCEPTION,module:030,debugMessage:null,message:DUPLICATE REQUEST FOUND.,previousCodes:null,errors:null,status:INTERNAL_SERVER_ERROR,timestamp:08-12-2021 20:23:29}. PASS
+20:23:03:987 Call Exit                                         :	<RESTAPIRequestDataSetVerify Row 011> RestApiGroupRequestResponseValidate::	Return Code --> FAIL.
+20:23:03:987 Test Exit:	End Of Test. Overall status FAIL.
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	FAIL                                                   |
+|			Test Run End Time          :	08:23:03:987 PM                                        |
+|			Test Run Duration          :	00:00:06:125                                           |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

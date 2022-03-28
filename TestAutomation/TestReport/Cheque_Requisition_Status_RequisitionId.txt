@@ -1,0 +1,9 @@
+All json body {
+    "status": "BAD_REQUEST",
+    "timestamp": "09-11-2021 17:13:10",
+    "code": "0000000",
+    "module": "000",
+    "message": "The parameter 'requisitionId' of value '`OutRequisitionId`' could not be converted to type 'Long'",
+    "debugMessage": "Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \"`OutRequisitionId`\"",
+    "errors": null
+}.

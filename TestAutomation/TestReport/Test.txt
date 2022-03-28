@@ -1,0 +1,47 @@
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Date              :	Thursday, November 25, 2021                            |
+|			Test Run Start Time        :	01:24:23:333 PM                                        |
+|			Test Name                  :	Ababil API Testcase                                    |
+|			Tester Name                :	Abu Safayat Arefin                                     |
+|			AUT Name                   :	Rest Api Testing                                       |
+|			Windows OS Name            :	Windows 10                                             |
+|			Windows OS Version         :	10.0                                                   |
+|			Test Tool Name             :	Restassured                                            |
+|			Test Tool Version          :	3.14.0                                                 |
+|__________________________________________________________________________________________________|
+
+
+
+REST API Requests For All Customer Details
+
+Test Step 1: ROIFLAG: RestApiResponseObjectDefine :	The Method Return Code with parameter list [GetResponseObj, NULL] PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [50.00+30+10|50.00*30*10|(50.00-30)-(10-5)-2|(50.00/30)/(10/5)/2, OutSumValue:ROUNDOFF=5|OutProductValue|OutDiffValue|OutDivsionValue:ROUNDOFF=DEFAULT, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "90.00000" to "90.00000" with operator EQ PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "13" to "13" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Sum = 90.00000, Sub = 13. PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [50.00+30+10|50.00*30*10|(50.00-30)-(10-5)-2|(50.00/30)/(10/5)/2, OutSumValue:ROUNDOFF=5|OutProductValue|OutDiffValue|OutDivsionValue:ROUNDOFF=DEFAULT, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "0.42" to "0.42" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Division = 0.42 PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [50.00+30+10|50.00*30*10|(50.00-30)-(10-5)-2|(50.00/30)/(10/5)/2, OutSumValue:ROUNDOFF=5|OutProductValue|OutDiffValue|OutDivsionValue:ROUNDOFF=DEFAULT, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "90.00000" to "90.00000" with operator EQ PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "15000" to "15000" with operator EQ PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "13" to "13" with operator EQ PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "0.42" to "0.42" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Sum = 90.00000, Sub = 13, Multiple = 15000 and Division = 0.42 PASS
+Test Step 1: ROIFLAG: FrmSubMultipleMathExpression:	The Method Return Code with parameter list [50.00+30+10+5, OutSumValue, NULL] PASS
+Test Step 1: ROIFLAG: UtlDataValueCompare         :	Comparison of "95" to "95" with operator EQ PASS
+Test Step 1: ROIFLAG: VERIFY                      :	Sum = 95; PASS
+Test Step 1: ROIFLAG: FrmSubMultipleParamValueSet :	The Method Return Code with parameter list [sumOfTwo|currentLoopNum, Total is 95|1, NULL] PASS
+Test Step 1: ROIFLAG: CONFIG                      :	Total is = Total is 95 and Current Loop = 1 PASS
+Test Step 1: RestApiGroupRequestResponseValidate::	[RESTAPIRequestDataSetVerify, DEFAULT, DEFAULT, NULL]	Return Code --> PASS.
+Test Step 1: REST API Testing for All customer Details  PASS
+
+
+ __________________________________________________________________________________________________ 
+|                                                                                                  |
+|			Test Run Status Overall    :	PASS                                                   |
+|			Test Run End Time          :	01:24:23:420 PM                                        |
+|			Test Run Duration          :	00:00:00:87                                            |
+|                                                                                                  |
+|_____________________________________________The End______________________________________________|

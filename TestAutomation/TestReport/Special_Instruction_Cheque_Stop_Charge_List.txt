@@ -1,0 +1,5 @@
+All json body {"chargeAmount":200,"vatAmount":0}.
+All json body {"chargeAmount":200,"vatAmount":0}.
+All json body {"chargeAmount":200,"vatAmount":0}.
+All json body {"chargeAmount":200,"vatAmount":0}.
+All json body {"chargeAmount":200,"vatAmount":0}.

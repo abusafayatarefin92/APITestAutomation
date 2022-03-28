@@ -1,0 +1,22 @@
+All json body {
+    number: 0003221001575,
+    accountName: Sabbir Khan,
+    customerId: 7802,
+    type: RECURRING_DEPOSIT,
+    productCode: 221,
+    productName: MUDARABA-MONTHLY DEPOSIT SCHEME MMDS,
+    status: ACTIVATED,
+    branchCode: 0003,
+    branchName: ABC Branch,
+    instalmentAmount: 1000,
+    currencyCode: BDT,
+    tenorType: MONTHS,
+    tenor: 12,
+    balance: 1000,
+    profitShareRatio: 0.57,
+    profitRate: null,
+    maturityAmount: null,
+    maturityDate: 2021-12-08,
+    activationDate: 2020-12-09,
+    closingDate: null
+}.

@@ -1,0 +1,8 @@
+All json body {
+    "requestId": "CCN2021111000000001",
+    "referenceNumber": "CCN2021111000000001",
+    "availableBalance": 4931383,
+    "actualBalance": 5190135.76,
+    "responseDateTime": "2021-11-10T10:03:11.471",
+    "voucherNumber": "220104395939"
+}.

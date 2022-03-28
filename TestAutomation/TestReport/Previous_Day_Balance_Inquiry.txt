@@ -1,0 +1,1 @@
+All json body {"balanceDate":"2021-08-06","balance":154443,"accountNumber":"0801111002016"}.
